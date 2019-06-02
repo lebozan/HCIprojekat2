@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Klase\TipVrste.cs" />
     <Compile Include="Klase\Etiketa.cs" />
     <Compile Include="Klase\Vrsta.cs" />
     <Compile Include="MainWindow.xaml.cs">
