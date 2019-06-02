@@ -18,54 +18,54 @@ namespace HCIprojekat2.Klase
             }
         }
 
-        private string _id;
-        private string _boja;
-        private string _opis;
+        private string _idEtikete;
+        private string _bojaEtikete;
+        private string _opisEtikete;
 
-        public string Id
+        public string IdEtikete
         {
             get
             {
-                return _id;
+                return _idEtikete;
             }
             set
             {
-                if (value != _id)
+                if (value != _idEtikete)
                 {
-                    _id = value;
-                    OnPropertyChanged("Id");
+                    _idEtikete = value;
+                    OnPropertyChanged("IdEtikete");
                 }
             }
         }
 
-        public string Boja
+        public string BojaEtikete
         {
             get
             {
-                return _boja;
+                return _bojaEtikete;
             }
             set
             {
-                if (value != _boja)
+                if (value != _bojaEtikete)
                 {
-                    _boja = value;
-                    OnPropertyChanged("Boja");
+                    _bojaEtikete = value;
+                    OnPropertyChanged("BojaEtikete");
                 }
             }
         }
 
-        public string Opis
+        public string OpisEtikete
         {
             get
             {
-                return _opis;
+                return _opisEtikete;
             }
             set
             {
-                if (value != _opis)
+                if (value != _opisEtikete)
                 {
-                    _opis = value;
-                    OnPropertyChanged("Opis");
+                    _opisEtikete = value;
+                    OnPropertyChanged("OpisEtikete");
                 }
             }
         }

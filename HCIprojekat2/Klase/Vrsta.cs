@@ -23,12 +23,12 @@ namespace HCIprojekat2.Klase
         private string _id;
         private string _ime;
         private string _opis;
-        private string _tip;
+        private TipVrste _tip;
         private string _statusUgrozenosti;
         private string _ikonica;
-        private string _opasnoZaLjude;
-        private string _iucnLista;
-        private string _naseljeniRegion;
+        private bool _opasnoZaLjude;
+        private bool _iucnLista;
+        private bool _naseljeniRegion;
         private string _turistickiStatus;
         private string _godisnjiPrihod;
         private string _datumOtkrivanja;
@@ -82,7 +82,7 @@ namespace HCIprojekat2.Klase
             }
         }
 
-        public string Tip
+        public TipVrste Tip
         {
             get
             {
@@ -130,7 +130,7 @@ namespace HCIprojekat2.Klase
             }
         }
 
-        public string OpasnoZaLjude
+        public bool OpasnoZaLjude
         {
             get
             {
@@ -146,7 +146,7 @@ namespace HCIprojekat2.Klase
             }
         }
 
-        public string IUCNLista
+        public bool IUCNLista
         {
             get
             {
@@ -162,7 +162,7 @@ namespace HCIprojekat2.Klase
             }
         }
 
-        public string NaseljeniRegion
+        public bool NaseljeniRegion
         {
             get
             {
