@@ -23,6 +23,13 @@ namespace HCIprojekat2
         public MainWindow()
         {
             InitializeComponent();
+
+        }
+
+        private void OtvoriMapu_Click(object sender, RoutedEventArgs e)
+        {
+            var w = new View.GlavniProzor();
+            w.ShowDialog();
         }
     }
 }
