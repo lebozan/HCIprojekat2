@@ -1,0 +1,232 @@
+﻿<Window x:Class="ResourcesApplication.TempWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cmd="clr-namespace:ResourcesApplication.Commands"
+        xmlns:local="clr-namespace:ResourcesApplication"
+        mc:Ignorable="d"
+        WindowState="Maximized"
+        Title="MainWindow" Height="Auto" Width="Auto">
+
+    <Window.CommandBindings>
+        <CommandBinding Command="cmd:RoutedCommands.AddTag"  Executed="AddTag_Executed"></CommandBinding>
+        <CommandBinding Command="cmd:RoutedCommands.ShowTags" Executed="ShowTags_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.AddType" Executed="AddType_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.ShowTypes" Executed="ShowTypes_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.AddResource" Executed="AddResource_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.ShowResources" Executed="ShowResources_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.EditResources" Executed="EditResources_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.DeleteResources" Executed="DeleteResources_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.EditTypes" Executed="EditTypes_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.DeleteTypes" Executed="DeleteTypes_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.EditTags" Executed="EditTags_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.DeleteTags" Executed="DeleteTags_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.SearchID" Executed="SearchID_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.SearchName" Executed="SearchName_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.SearchType" Executed="SearchType_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.SearchTag" Executed="SearchTag_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.Filter" Executed="Filter_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.ShowAll" Executed="ShowAll_Executed"/>
+    </Window.CommandBindings>
+    <DockPanel>
+        <Menu DockPanel.Dock ="Top" Height="25">
+            <Menu.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <DockPanel HorizontalAlignment="Stretch"></DockPanel>
+                </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header=" Resursi" ToolTip="Prikaz svih opcija za manipulisanje resursima">
+                <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog resursa" Command="cmd:RoutedCommands.AddResource" InputGestureText="Ctrl+A">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\AddIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header=" Prikazi" ToolTip="Prikaz svih resursa" Command="cmd:RoutedCommands.ShowResources" InputGestureText="Alt+B">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\TableIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Izmeni" ToolTip="Izmena resursa" Command="cmd:RoutedCommands.EditResources" InputGestureText="Ctrl+C">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\EditIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Obrisi" ToolTip="Brisanje resursa" Command="cmd:RoutedCommands.DeleteResources" InputGestureText="Ctrl+D">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\DeleteIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+            </MenuItem>
+
+
+
+            <MenuItem Header=" Tipovi resursa" ToolTip="Prikaz svih opcija za manipulisanje tipovima resursa">
+                <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog tipa resursa" Command="cmd:RoutedCommands.AddType" InputGestureText="Alt+A">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\AddIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header=" Prikazi" ToolTip="Prikaz svih tipova resursa" Command="cmd:RoutedCommands.ShowTypes" InputGestureText="Alt+B">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\TableIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Izmeni" ToolTip="Izmena tipova resursa" Command="cmd:RoutedCommands.EditTypes" InputGestureText="Alt+C">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\EditIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Obrisi" ToolTip="Brisanje tipova resursa" Command="cmd:RoutedCommands.DeleteTypes" InputGestureText="Alt+D">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\DeleteIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+            </MenuItem>
+            <MenuItem Header=" Etikete" ToolTip="Prikaz svih opcija za manipulisanje etiketama">
+                <MenuItem Header=" Dodaj" ToolTip="Dodavanje nove etikete" Command="cmd:RoutedCommands.AddTag" InputGestureText="Ctrl+E">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\AddIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Prikaži" ToolTip="Prikaz svih etiketa" Command="cmd:RoutedCommands.ShowTags" InputGestureText="Ctrl+F">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\TableIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Uredi" ToolTip="Izmena etiketa" Command="cmd:RoutedCommands.EditTags" InputGestureText="Ctrl+G">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\EditIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Obrisi" ToolTip="Brisanje etiketa" Command="cmd:RoutedCommands.DeleteTags" InputGestureText="Ctrl+H">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\DeleteIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+            </MenuItem>
+            <MenuItem Header=" Pretraga mape" ToolTip="Odabir opcija za pretragu resursa">
+                <MenuItem Header=" Pretraga resursa po ID-u" ToolTip="Pretraga resursa na mapi po ID-u resursa" Command="cmd:RoutedCommands.SearchID" InputGestureText="Ctrl+I">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header=" Pretraga resursa po nazivu" ToolTip="Pretraga resursa na mapi po nazivu resursa" Command="cmd:RoutedCommands.SearchName" InputGestureText="Ctrl+N">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header=" Pretraga resursa po etiketi" ToolTip="Pretraga resursa na mapi po etiketi resursa" Command="cmd:RoutedCommands.SearchTag" InputGestureText="Ctrl+O">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header=" Pretraga resursa po tipu" ToolTip="Pretraga resursa na mapi po tipu resursa" Command="cmd:RoutedCommands.SearchType" InputGestureText="Ctrl+U">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header=" Filtriranje" ToolTip="Odabir kriterijuma koje će prikazani resursi ispunjavati" Command="cmd:RoutedCommands.Filter" InputGestureText="Ctrl+F">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header=" Prikaz svih resursa mape" ToolTip="Prikaz svih resursa koji su dodati na mapu" Command="cmd:RoutedCommands.ShowAll" InputGestureText="Ctrl+A">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+                <Separator></Separator>
+            </MenuItem>
+            <MenuItem Header=" Pomoć" ToolTip="Prikaz pomoćne dokumentacije" HorizontalAlignment="Left">
+                <MenuItem Header="_Dokumentacija" InputGestureText="F1" Click="Help_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\DocumentIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                    <MenuItem.ToolTip>
+                        <StackPanel Orientation="Horizontal">
+                            <Image Margin="5" Source="Icons/fancy.png"></Image>
+                            <TextBlock Margin="5" TextWrapping="Wrap" MaxWidth="100">
+                        Korisnička pomoć organizovana je u vidu uputstva za upotrebu aplikacije i demo videa. 
+                                Izborom ponuđene pomoći korisnik se bolje upoznaje se
+                                    funkcionisanjem aplikacije.
+                            </TextBlock>
+                        </StackPanel>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem Name="Demo" Header="_Demo mod" Click="Demo_Click">
+                    <MenuItem.Icon>
+                        <Image Source="Icons\DemoTapeIcon.png" Width="12" Height="12"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <!-- 
+        <MenuItem Header=" Pomoć" ToolTip="Prikaz pomoćne dokumentacije" HorizontalAlignment="Right">
+            <MenuItem Header="_Dokumentacija" InputGestureText="F1" Click="Help_Click">
+                <MenuItem.Icon>
+                    <Image Source="Icons\document.png" Width="12" Height="12"/>
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Name="Demo" Header="_Demo mod" Click="Demo_Click">
+                <MenuItem.Icon>
+                    <Image Source="Icons\demo_play.png" Width="12" Height="12"/>
+                </MenuItem.Icon>
+            </MenuItem>
+        </MenuItem>
+        -->
+        </Menu>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250" />
+                <ColumnDefinition Width="123*" />
+                <ColumnDefinition Width="389*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" Height="Auto" Grid.Column="0" Background="Black" Margin="0,0,0.6,-0.2">
+
+                <GroupBox ToolTip="Lista resursa koji mogu biti dodati na mapu" Header="Resursi" Height="670" Margin="10,0" Foreground="White" >
+                    <!--PreviewMouseLeftButtonDown="ListView_PreviewMouseLeftButtonDown" MouseMove="ListView_MouseMove"-->
+                    <ListView Name="listView" SelectedItem="{Binding Path=SelectedResource}" ItemsSource="{Binding Path=ResourcesToShow}"  Margin="0,0,-2,0" Background="Black" SelectionChanged="listView_SelectionChanged" PreviewMouseLeftButtonDown="ListView_PreviewMouseLeftButtonDown" MouseMove="ListView_MouseMove">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="{Binding IconPath}" Height="30" Width="30" Margin="0,0,5,0" HorizontalAlignment="Left"/>
+                                        <TextBlock Text="{Binding Id}" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </GroupBox>
+            </StackPanel>
+            
+            
+            <!-- Mouse.PreviewMouseDown="Map_PreviewMouseLeftButtonDown" MouseRightButtonDown="Map_MouseRightButtonDown" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop"-->
+            <ScrollViewer Grid.Column="1" Grid.ColumnSpan="2" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
+                <Canvas  Name="Map" AllowDrop="True" Grid.Column="1" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop" MouseWheel="UIElement_OnMouseWheel">
+                    <Canvas.Background>
+                        <ImageBrush ImageSource="Maps\world_map.png" AlignmentX="Left" AlignmentY="Top" Stretch="None"/>
+                    </Canvas.Background>
+                    <Canvas.ContextMenu>
+                        <ContextMenu Name="contextMenu">
+                            <MenuItem Header="Nalepi kopiran resurs" Click="paste_Click">
+                            </MenuItem>
+                        </ContextMenu>
+                    </Canvas.ContextMenu>
+                </Canvas>
+            </ScrollViewer>
+        </Grid>
+    </DockPanel>
+</Window>

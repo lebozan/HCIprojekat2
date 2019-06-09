@@ -1,0 +1,44 @@
+﻿<Window x:Class="ResourcesApplication.TypeSearch"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ResourcesApplication"
+        mc:Ignorable="d"
+        Title="Pretraga resursa po tipu resursa" Height="170" Width="400">
+    <Grid Background="Aqua">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="30"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" Content="Pretražite resurse na mapi po tipu resursa:"/>
+
+        <Grid Grid.Column="1" Grid.Row="1" Background="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="30"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Tip resursa:"/>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <ComboBox Name="autoCompleteBoxTypes" ItemsSource="{Binding Path=Types, UpdateSourceTrigger=PropertyChanged}" ToolTip="Odabor jednog od postojećih tipova resursa (prikazani su id-ijevi tipova)"
+                          DisplayMemberPath="Id"
+                          SelectedValuePath="Id"
+                          SelectedValue="{Binding Path=Types}" />
+            </StackPanel>
+
+            <Label Grid.Row="1" Grid.Column="1" Content="" Foreground="Red" Name="Message"/>
+        </Grid>
+        <Button Name="buttonSearch" IsEnabled="True" ToolTip="Pretraži resurse po unesenim kriterijumima"  Content="Pretraži" Grid.Column="1" Click="typeSearch" Grid.Row="2" />
+    </Grid>
+</Window>
