@@ -37,24 +37,24 @@
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
             <MenuItem Header=" Resursi" ToolTip="Prikaz svih opcija za manipulisanje resursima">
-                <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog resursa" Command="cmd:RoutedCommands.AddResource" InputGestureText="Ctrl+A">
+                <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog resursa" Command="cmd:RoutedCommands.AddResource" InputGestureText="Ctrl+D">
                     <MenuItem.Icon>
                         <Image Source="Icons\AddIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator></Separator>
-                <MenuItem Header=" Prikazi" ToolTip="Prikaz svih resursa" Command="cmd:RoutedCommands.ShowResources" InputGestureText="Alt+B">
+                <MenuItem Header=" Prikazi" ToolTip="Prikaz svih resursa" Command="cmd:RoutedCommands.ShowResources" InputGestureText="Ctrl+P">
                     <MenuItem.Icon>
                         <Image Source="Icons\TableIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Izmeni" ToolTip="Izmena resursa" Command="cmd:RoutedCommands.EditResources" InputGestureText="Ctrl+C">
+                <MenuItem Header="Izmeni" ToolTip="Izmena resursa" Command="cmd:RoutedCommands.EditResources" InputGestureText="Ctrl+I">
                     <MenuItem.Icon>
                         <Image Source="Icons\EditIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="Obrisi" ToolTip="Brisanje resursa" Command="cmd:RoutedCommands.DeleteResources" InputGestureText="Ctrl+D">
+                <MenuItem Header="Obrisi" ToolTip="Brisanje resursa" Command="cmd:RoutedCommands.DeleteResources" InputGestureText="Ctrl+O">
                     <MenuItem.Icon>
                         <Image Source="Icons\DeleteIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
@@ -65,24 +65,24 @@
 
 
             <MenuItem Header=" Tipovi resursa" ToolTip="Prikaz svih opcija za manipulisanje tipovima resursa">
-                <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog tipa resursa" Command="cmd:RoutedCommands.AddType" InputGestureText="Alt+A">
+                <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog tipa resursa" Command="cmd:RoutedCommands.AddType" InputGestureText="Alt+D">
                     <MenuItem.Icon>
                         <Image Source="Icons\AddIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator></Separator>
-                <MenuItem Header=" Prikazi" ToolTip="Prikaz svih tipova resursa" Command="cmd:RoutedCommands.ShowTypes" InputGestureText="Alt+B">
+                <MenuItem Header=" Prikazi" ToolTip="Prikaz svih tipova resursa" Command="cmd:RoutedCommands.ShowTypes" InputGestureText="Alt+P">
                     <MenuItem.Icon>
                         <Image Source="Icons\TableIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Izmeni" ToolTip="Izmena tipova resursa" Command="cmd:RoutedCommands.EditTypes" InputGestureText="Alt+C">
+                <MenuItem Header="Izmeni" ToolTip="Izmena tipova resursa" Command="cmd:RoutedCommands.EditTypes" InputGestureText="Alt+I">
                     <MenuItem.Icon>
                         <Image Source="Icons\EditIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="Obrisi" ToolTip="Brisanje tipova resursa" Command="cmd:RoutedCommands.DeleteTypes" InputGestureText="Alt+D">
+                <MenuItem Header="Obrisi" ToolTip="Brisanje tipova resursa" Command="cmd:RoutedCommands.DeleteTypes" InputGestureText="Alt+O">
                     <MenuItem.Icon>
                         <Image Source="Icons\DeleteIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
@@ -90,24 +90,24 @@
                 <Separator></Separator>
             </MenuItem>
             <MenuItem Header=" Etikete" ToolTip="Prikaz svih opcija za manipulisanje etiketama">
-                <MenuItem Header=" Dodaj" ToolTip="Dodavanje nove etikete" Command="cmd:RoutedCommands.AddTag" InputGestureText="Ctrl+E">
+                <MenuItem Header=" Dodaj" ToolTip="Dodavanje nove etikete" Command="cmd:RoutedCommands.AddTag" InputGestureText="Ctrl+Alt+D">
                     <MenuItem.Icon>
                         <Image Source="Icons\AddIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="Prikaži" ToolTip="Prikaz svih etiketa" Command="cmd:RoutedCommands.ShowTags" InputGestureText="Ctrl+F">
+                <MenuItem Header="Prikaži" ToolTip="Prikaz svih etiketa" Command="cmd:RoutedCommands.ShowTags" InputGestureText="Ctrl+Alt+P">
                     <MenuItem.Icon>
                         <Image Source="Icons\TableIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="Uredi" ToolTip="Izmena etiketa" Command="cmd:RoutedCommands.EditTags" InputGestureText="Ctrl+G">
+                <MenuItem Header="Izmeni" ToolTip="Izmena etiketa" Command="cmd:RoutedCommands.EditTags" InputGestureText="Ctrl+Alt+I">
                     <MenuItem.Icon>
                         <Image Source="Icons\EditIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
                 <Separator></Separator>
-                <MenuItem Header="Obrisi" ToolTip="Brisanje etiketa" Command="cmd:RoutedCommands.DeleteTags" InputGestureText="Ctrl+H">
+                <MenuItem Header="Obrisi" ToolTip="Brisanje etiketa" Command="cmd:RoutedCommands.DeleteTags" InputGestureText="Ctrl+Alt+O">
                     <MenuItem.Icon>
                         <Image Source="Icons\DeleteIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
@@ -115,32 +115,32 @@
                 <Separator></Separator>
             </MenuItem>
             <MenuItem Header=" Pretraga mape" ToolTip="Odabir opcija za pretragu resursa">
-                <MenuItem Header=" Pretraga resursa po ID-u" ToolTip="Pretraga resursa na mapi po ID-u resursa" Command="cmd:RoutedCommands.SearchID" InputGestureText="Ctrl+I">
+                <MenuItem Header=" Pretraga resursa po ID-u" ToolTip="Pretraga resursa na mapi po ID-u resursa" Command="cmd:RoutedCommands.SearchID" InputGestureText="Alt+X">
                     <MenuItem.Icon>
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header=" Pretraga resursa po nazivu" ToolTip="Pretraga resursa na mapi po nazivu resursa" Command="cmd:RoutedCommands.SearchName" InputGestureText="Ctrl+N">
+                <MenuItem Header=" Pretraga resursa po nazivu" ToolTip="Pretraga resursa na mapi po nazivu resursa" Command="cmd:RoutedCommands.SearchName" InputGestureText="Alt+C">
                     <MenuItem.Icon>
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header=" Pretraga resursa po etiketi" ToolTip="Pretraga resursa na mapi po etiketi resursa" Command="cmd:RoutedCommands.SearchTag" InputGestureText="Ctrl+O">
+                <MenuItem Header=" Pretraga resursa po tipu" ToolTip="Pretraga resursa na mapi po tipu resursa" Command="cmd:RoutedCommands.SearchType" InputGestureText="Alt+V">
                     <MenuItem.Icon>
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header=" Pretraga resursa po tipu" ToolTip="Pretraga resursa na mapi po tipu resursa" Command="cmd:RoutedCommands.SearchType" InputGestureText="Ctrl+U">
+                <MenuItem Header=" Pretraga resursa po etiketi" ToolTip="Pretraga resursa na mapi po etiketi resursa" Command="cmd:RoutedCommands.SearchTag" InputGestureText="Alt+B">
                     <MenuItem.Icon>
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header=" Filtriranje" ToolTip="Odabir kriterijuma koje će prikazani resursi ispunjavati" Command="cmd:RoutedCommands.Filter" InputGestureText="Ctrl+F">
+                <MenuItem Header=" Filtriranje" ToolTip="Odabir kriterijuma koje će prikazani resursi ispunjavati" Command="cmd:RoutedCommands.Filter" InputGestureText="Alt+F">
                     <MenuItem.Icon>
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header=" Prikaz svih resursa mape" ToolTip="Prikaz svih resursa koji su dodati na mapu" Command="cmd:RoutedCommands.ShowAll" InputGestureText="Ctrl+A">
+                <MenuItem Header=" Prikaz svih resursa mape" ToolTip="Prikaz svih resursa koji su dodati na mapu" Command="cmd:RoutedCommands.ShowAll" InputGestureText="Alt+S">
                     <MenuItem.Icon>
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
@@ -203,7 +203,7 @@
                                 <WrapPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <Image Source="{Binding IconPath}" Height="30" Width="30" Margin="0,0,5,0" HorizontalAlignment="Left"/>
-                                        <TextBlock Text="{Binding Id}" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
                                     </StackPanel>
                                 </WrapPanel>
                             </DataTemplate>

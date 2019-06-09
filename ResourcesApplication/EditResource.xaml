@@ -233,9 +233,9 @@
             <Label Grid.Column="0" Grid.Row="8" Content="Jedinica mere:" />
             <ComboBox Name="comboBoxMeasurementUnit" Text="{Binding Path=MeasurementUnit, UpdateSourceTrigger=PropertyChanged}" ToolTip="Enter measurement unit" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Margin="3,4" Height="22">
                 <ComboBoxItem>Merica</ComboBoxItem>
-                <ComboBoxItem>Barrel</ComboBoxItem>
-                <ComboBoxItem>Ton</ComboBoxItem>
-                <ComboBoxItem>Kilograme</ComboBoxItem>
+                <ComboBoxItem>Barel</ComboBoxItem>
+                <ComboBoxItem>Tona</ComboBoxItem>
+                <ComboBoxItem>Kilogram</ComboBoxItem>
             </ComboBox>
 
             <Label Grid.Column="0" Grid.Row="9" Content="Frekvencija pojavljivanja:" />
@@ -245,9 +245,9 @@
                 <ComboBoxItem>Univerzalan</ComboBoxItem>
             </ComboBox>
 
-            <CheckBox Grid.Column="0" Grid.Row="10" Margin="0,5,10,10" Name="Obnovljiv" IsChecked="{Binding Path=Renewable, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs obnovljiv?" Content="Renewable"/>
-            <CheckBox Grid.Column="0" Grid.Row="11" Margin="0,5,10,10" Name="Importance" IsChecked="{Binding Path=Importance, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs od strateske vaznosti?" Content="Importance"/>
-            <CheckBox Grid.Column="0" Grid.Row="12" Margin="0,5,10,-53" Name="AbleToExploate" IsChecked="{Binding Path=AbleToExploate, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li postoji mogucnost eksploatacije resursa?" Content="AbleToExploate"/>
+            <CheckBox Grid.Column="0" Grid.Row="10" Margin="0,5,10,10" Name="Obnovljiv" IsChecked="{Binding Path=Renewable, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs obnovljiv?" Content="Obnovljiv"/>
+            <CheckBox Grid.Column="0" Grid.Row="11" Margin="0,5,10,10" Name="Importance" IsChecked="{Binding Path=Importance, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs od strateske vaznosti?" Content="Strateška važnost"/>
+            <CheckBox Grid.Column="0" Grid.Row="12" Margin="0,5,10,-53" Name="AbleToExploate" IsChecked="{Binding Path=AbleToExploate, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li postoji mogucnost eksploatacije resursa?" Content="Eksploatacija"/>
 
         </Grid>
 
