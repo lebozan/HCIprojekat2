@@ -6,12 +6,12 @@
         xmlns:cmd="clr-namespace:ResourcesApplication.Commands"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Maps" Height="650" Width="1050">
+        Title="Mapa" Height="650" Width="1050">
     <DockPanel>
 
         <Grid RenderTransformOrigin="0.501,0.492">
             <Grid.Background>
-                <ImageBrush Stretch="None" ImageSource="Maps/background.jpg" AlignmentY="Top" AlignmentX="Center"/>
+                <ImageBrush Stretch="Fill" ImageSource="Maps/background.jpg" AlignmentY="Top" AlignmentX="Center"/>
             </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>

@@ -299,6 +299,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Maps\background.jpg" />
+    <Resource Include="Icons\FireIcon2.png" />
+    <Resource Include="Icons\ForestIcon2.png" />
+    <Resource Include="Icons\NaturalFoodIcon.png" />
+    <Resource Include="Icons\NaturalFoodIcon2.png" />
+    <Resource Include="Icons\OilRigIcon.png" />
+    <Resource Include="Icons\OilRigIcon2.png" />
+    <Resource Include="Icons\WaterIcon2.png" />
+    <Resource Include="Icons\WindIcon2.png" />
+    <Resource Include="Icons\TutorialIcon.png" />
+    <Resource Include="Icons\DocumentIcon.png" />
+    <Resource Include="Icons\FireIcon.png" />
     <Content Include="Html\BrisanjeEtikete.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -317,11 +329,11 @@
     <Content Include="Html\error.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Maps\world_map.png" />
     <Resource Include="Maps\world-map-big_01.gif" />
     <Resource Include="Maps\world-map-big_02.gif" />
     <Resource Include="Maps\world-map-big_03.gif" />
     <Resource Include="Maps\world-map-big_04.gif" />
-    <Resource Include="Icons\fancy.PNG" />
     <Content Include="Html\GlavniProzorAplikacije.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -359,16 +371,10 @@
     <Content Include="Html\ResourceType.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Maps\background.jpg" />
     <Resource Include="Icons\AddIcon.png" />
     <Resource Include="Icons\AppIcon.png" />
     <Resource Include="Icons\CancelIcon.png" />
     <Resource Include="Icons\DeleteIcon.png" />
-    <Resource Include="Icons\DemoPauseIcon.png" />
-    <Resource Include="Icons\DemoPlayIcon.png" />
-    <Resource Include="Icons\DemoStopIcon.png" />
-    <Resource Include="Icons\DemoTapeIcon.png" />
-    <Resource Include="Icons\DocumentIcon.png" />
     <Resource Include="Icons\EditIcon.png" />
     <Resource Include="Icons\ForestIcon.png" />
     <Resource Include="Icons\OilIcon.png" />
@@ -378,13 +384,6 @@
     <Resource Include="Icons\TransmissionTowerIcon.png" />
     <Resource Include="Icons\WaterIcon.png" />
     <Resource Include="Icons\WindIcon.png" />
-    <Resource Include="Maps\asia_map.jpg" />
-    <Resource Include="Maps\europe_map.jpg" />
-    <Resource Include="Maps\south_america_map.jpg" />
-    <Resource Include="Maps\world_map.png" />
-    <Resource Include="Maps\NoviSadMap1.png" />
-    <Resource Include="Maps\NoviSadMap2.png" />
-    <Resource Include="Maps\NoviSadMap3.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

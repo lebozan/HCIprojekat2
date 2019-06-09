@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="MainWindow" Height="Auto" Width="Auto">
+        Title="Prikaz dela mape" Height="Auto" Width="Auto">
 
     <Window.CommandBindings>
         <CommandBinding Command="cmd:RoutedCommands.AddTag"  Executed="AddTag_Executed"></CommandBinding>
@@ -163,9 +163,9 @@
                         </StackPanel>
                     </MenuItem.ToolTip>
                 </MenuItem>
-                <MenuItem Name="Demo" Header="_Demo mod">
+                <MenuItem Name="Tutorial" Header="_Tutorial" InputGestureText="F2">
                     <MenuItem.Icon>
-                        <Image Source="Icons\DemoTapeIcon.png" Width="12" Height="12"/>
+                        <Image Source="Icons\TutorialIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
