@@ -163,7 +163,7 @@
                         </StackPanel>
                     </MenuItem.ToolTip>
                 </MenuItem>
-                <MenuItem Name="Demo" Header="_Demo mod" Click="Demo_Click">
+                <MenuItem Name="Demo" Header="_Demo mod">
                     <MenuItem.Icon>
                         <Image Source="Icons\DemoTapeIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>

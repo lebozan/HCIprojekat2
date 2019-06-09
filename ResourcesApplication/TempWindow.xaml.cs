@@ -18,7 +18,6 @@ using System.Windows.Shapes;
 
 using ResourcesApplication.Beans;
 using ResourcesApplication.Html;
-using ResourcesApplication.Demo;
 
 namespace ResourcesApplication
 {
