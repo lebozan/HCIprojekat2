@@ -7,7 +7,7 @@
         xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Pretraga resursa pi ID-u" Height="170" Width="400">
+        Title="Pretraga resursa po ID-u" Height="170" Width="400">
 
     <Grid Background="Aqua">
         <Grid.RowDefinitions>

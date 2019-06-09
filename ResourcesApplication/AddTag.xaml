@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
          xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
-        Title="AddTag" Height="400" Width="800">
+        Title="Dodavanje Etikete" Height="400" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>

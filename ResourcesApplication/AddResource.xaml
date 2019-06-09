@@ -230,7 +230,7 @@
             </ComboBox>
 
             <CheckBox Grid.Column="0" Grid.Row="10" Margin="0,5,10,10" Name="Obnovljiv" IsChecked="{Binding Path=Renewable, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs obnovljiv?" Content="Obnovljiv"/>
-            <CheckBox Grid.Column="0" Grid.Row="11" Margin="0,5,10,10" Name="Importance" IsChecked="{Binding Path=Importance, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs od strateske vaznosti?" Content="Strateska vaznost"/>
+            <CheckBox Grid.Column="0" Grid.Row="11" Margin="0,5,10,10" Name="Importance" IsChecked="{Binding Path=Importance, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs od strateske vaznosti?" Content="Strateška važnost"/>
             <CheckBox Grid.Column="0" Grid.Row="12" Margin="0,5,10,-53" Name="AbleToExploate" IsChecked="{Binding Path=AbleToExploate, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li postoji mogucnost eksploatacije?" Content="Eksploatacija"/>
             <Button Content="Dodaj etikete" HorizontalAlignment="Left" Margin="370,6,0,0" Grid.Row="6" VerticalAlignment="Top" Width="96" Click="ButtonTags_Click" Grid.Column="1"/>
 

@@ -63,12 +63,6 @@ namespace ResourcesApplication.Beans
                 if (value != iconPath)
                 {
                     iconPath = value;
-                    string newPath = Directory.GetCurrentDirectory() + "\\" + @iconPath.Split('\\').Last();
-                    if (!File.Exists(newPath) && newPath != null && !string.IsNullOrEmpty(newPath) && !string.IsNullOrWhiteSpace(newPath))
-                    {
-                        File.Copy(@iconPath, @newPath, true);
-                    }
-                    iconPath = newPath;
                     OnPropertyChanged("IconPath");
                 }
             }
