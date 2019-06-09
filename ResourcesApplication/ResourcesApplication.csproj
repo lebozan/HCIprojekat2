@@ -316,6 +316,10 @@
     <Content Include="Html\error.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Maps\world-map-big_01.gif" />
+    <Resource Include="Maps\world-map-big_02.gif" />
+    <Resource Include="Maps\world-map-big_03.gif" />
+    <Resource Include="Maps\world-map-big_04.gif" />
     <Resource Include="Icons\fancy.PNG" />
     <Content Include="Html\GlavniProzorAplikacije.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

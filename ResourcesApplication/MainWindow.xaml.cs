@@ -32,7 +32,7 @@ namespace ResourcesApplication
         {
 
             string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/world_map.png");
+            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_01.gif");
             TempWindow tag = new TempWindow("WORLD");
 
             ImageBrush imgB = new ImageBrush();
@@ -46,7 +46,7 @@ namespace ResourcesApplication
         {
 
             string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/europe_map.jpg");
+            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_02.gif");
             TempWindow tag = new TempWindow("EUROPE");
 
             ImageBrush imgB = new ImageBrush();
@@ -60,7 +60,7 @@ namespace ResourcesApplication
         {
 
             string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/south_america_map.jpg");
+            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_03.gif");
             TempWindow tag = new TempWindow("AMERICA");
 
             ImageBrush imgB = new ImageBrush();
@@ -74,7 +74,7 @@ namespace ResourcesApplication
         {
 
             string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/asia_map.jpg");
+            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_04.gif");
             TempWindow tag = new TempWindow("ASIA");
 
             ImageBrush imgB = new ImageBrush();

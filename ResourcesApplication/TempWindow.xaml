@@ -214,8 +214,8 @@
             
             
             <!-- Mouse.PreviewMouseDown="Map_PreviewMouseLeftButtonDown" MouseRightButtonDown="Map_MouseRightButtonDown" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop"-->
-            <ScrollViewer Grid.Column="1" Grid.ColumnSpan="2" CanContentScroll="True" HorizontalScrollBarVisibility="Auto">
-                <Canvas  Name="Map" AllowDrop="True" Grid.Column="1" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop" MouseWheel="UIElement_OnMouseWheel">
+            <ScrollViewer Grid.Column="1" Grid.ColumnSpan="2" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop" MouseWheel="UIElement_OnMouseWheel">
+                <Canvas Name="Map" AllowDrop="True" Grid.Column="1" >
                     <Canvas.Background>
                         <ImageBrush ImageSource="Maps\world_map.png" AlignmentX="Left" AlignmentY="Top" Stretch="None"/>
                     </Canvas.Background>
@@ -226,6 +226,7 @@
                         </ContextMenu>
                     </Canvas.ContextMenu>
                 </Canvas>
+                
             </ScrollViewer>
         </Grid>
     </DockPanel>
