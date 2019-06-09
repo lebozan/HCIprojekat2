@@ -8,7 +8,22 @@
         Title="MainWindow" Height="600" Width="900">
     <Grid>
         <DockPanel>
-            <ListView Grid.Column="1" Grid.Row="0" DockPanel.Dock="Right" Width="200">
+          <Menu DockPanel.Dock ="Top">
+            <Menu.ItemsPanel><!--Podkontrola koja određuje kako se item-i prikazuju.-->
+              <ItemsPanelTemplate><!-- Specificiramo ne šta je u kontroli nego template koji je formira-->
+                <DockPanel HorizontalAlignment="Stretch"></DockPanel><!-- Prikazujemo preko Dock Panela koji preuzme sav prostor -->
+              </ItemsPanelTemplate>
+            </Menu.ItemsPanel>
+            <MenuItem Header="Dodaj">
+              <MenuItem Header="_Novi Resurs" Click="MenuItem_Click"></MenuItem>
+              <MenuItem Header="_Novi Tip" Click="MenuItem_Click_1"></MenuItem>
+              <MenuItem Header="_Novu Etiketu" Click="MenuItem_Click_2"></MenuItem>
+            </MenuItem>
+            <MenuItem Header ="Prikaz">
+              <MenuItem Header="_Tabelarni prikaz" Click="MenuItem_TableView"></MenuItem>
+            </MenuItem>
+          </Menu>
+          <ListView Grid.Column="1" Grid.Row="0" DockPanel.Dock="Right" Width="200">
                 <Button Height="50" Width="50">
                 </Button>
             </ListView>

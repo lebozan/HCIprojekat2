@@ -56,12 +56,25 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Klase\Etiketa.cs" />
+    <Compile Include="Klase\Resurs.cs" />
     <Compile Include="Klase\TipVrste.cs" />
     <Compile Include="Klase\Vrsta.cs" />
+    <Compile Include="View\AddResource.xaml.cs">
+      <DependentUpon>AddResource.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddTag.xaml.cs">
+      <DependentUpon>AddTag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AddType.xaml.cs">
+      <DependentUpon>AddType.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\GlavniProzor.xaml.cs">
       <DependentUpon>GlavniProzor.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MapaRenderer.cs" />
+    <Compile Include="View\TableView.xaml.cs">
+      <DependentUpon>TableView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,7 +87,23 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\AddResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddTag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AddType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\GlavniProzor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TableView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

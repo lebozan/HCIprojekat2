@@ -26,6 +26,32 @@ namespace HCIprojekat2
 
         }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var s = new HCIprojekat2.View.AddResource();
+            s.Show();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            var s = new HCIprojekat2.View.AddType();
+            s.Show();
+        }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            var s = new HCIprojekat2.View.AddTag();
+            s.ShowDialog();
+
+        }
+
+        private void MenuItem_TableView(object sender, RoutedEventArgs e)
+        {
+            var s = new HCIprojekat2.View.TableView();
+            s.ShowDialog();
+
+        }
+
         private void OtvoriMapu_Click(object sender, RoutedEventArgs e)
         {
             var w = new View.GlavniProzor();
