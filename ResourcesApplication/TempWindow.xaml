@@ -135,11 +135,6 @@
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header=" Filtriranje" ToolTip="Odabir kriterijuma koje će prikazani resursi ispunjavati" Command="cmd:RoutedCommands.Filter" InputGestureText="Alt+F">
-                    <MenuItem.Icon>
-                        <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
-                    </MenuItem.Icon>
-                </MenuItem>
                 <MenuItem Header=" Prikaz svih resursa mape" ToolTip="Prikaz svih resursa koji su dodati na mapu" Command="cmd:RoutedCommands.ShowAll" InputGestureText="Alt+S">
                     <MenuItem.Icon>
                         <Image Source="Icons\SearchIcon.png" Width="12" Height="12"/>
@@ -154,7 +149,6 @@
                     </MenuItem.Icon>
                     <MenuItem.ToolTip>
                         <StackPanel Orientation="Horizontal">
-                            <Image Margin="5" Source="Icons/fancy.png"></Image>
                             <TextBlock Margin="5" TextWrapping="Wrap" MaxWidth="100">
                         Korisnička pomoć organizovana je u vidu uputstva za upotrebu aplikacije i demo videa. 
                                 Izborom ponuđene pomoći korisnik se bolje upoznaje se

@@ -51,20 +51,6 @@ namespace ResourcesApplication
 
 
 
-
-
-
-
-        public ObservableCollection<Resource> ResourcesForUndo
-        {
-
-            get; set;
-        }
-
-
-
-
-
         public Resource SelectedResource { get; set; }
 
 
@@ -79,28 +65,20 @@ namespace ResourcesApplication
             DataContext = this;
 
             Resources = tw.database.Resources;
-            ResourcesForUndo = new ObservableCollection<Resource>();
 
 
         }
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Da li ste sigurni da želite da obrišete odabrani resurs?", "Upozorenje", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 Resource forDelete = new Resource(SelectedResource);
-                ResourcesForUndo.Add(forDelete);
                 tw.database.DeleteResource(forDelete);
                 tw.addToResourcesToShow();
                 tw.ResourcePins_Draw();
 
             }
-
-
-            /*
-            DeleteResourceConfirmation d = new DeleteResourceConfirmation(SelectedResource.Id);
-            d.Show();
-            */
 
 
         }
@@ -134,23 +112,6 @@ namespace ResourcesApplication
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
 
             }
-        }
-
-
-
-        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
-        {
-
-            if (ResourcesForUndo.Count() != 0)
-            {
-                Resource resource = ResourcesForUndo.ElementAt(ResourcesForUndo.Count() - 1);
-                ResourcesForUndo.RemoveAt(ResourcesForUndo.Count() - 1);
-                Resources.Add(resource);
-                tw.database.SaveResources();
-                tw.addToResourcesToShow();
-            }
-
-
         }
 
 

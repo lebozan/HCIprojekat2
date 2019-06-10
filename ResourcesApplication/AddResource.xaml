@@ -11,7 +11,7 @@
         Title="Dodavanje resursa" Height="550
         " Width="800">
 
-    <Grid Background="LightGray">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="42*" />
             <RowDefinition Height="47*"/>
@@ -46,8 +46,8 @@
                 <RowDefinition Height="30" />
                 <RowDefinition Height="0*" />
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Content="Id:" />
-            <TextBox Name="textBoxId" MaxLength="55" Validation.Error="textBoxId_Error" TextChanged="textBoxId_TextChanged" ToolTip="Unos oznake resursa" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" Margin="3" >
+            <Label Grid.Column="0" Grid.Row="0" Content="Id:" HorizontalAlignment="Right" FontSize="17" />
+            <TextBox Name="textBoxId" MaxLength="55" Validation.Error="textBoxId_Error" TextChanged="textBoxId_TextChanged" ToolTip="Unos oznake resursa" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" Margin="3,3,383,3" >
                 <TextBox.Text>
                     <Binding Path="Id" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -75,8 +75,8 @@
                 </Validation.ErrorTemplate>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="1" Content="Cena:" />
-            <TextBox Name="textBoxPrice" Validation.Error="textBoxPrice_Error" MaxLength="55"  TextChanged="textBoxPrice_TextChanged" ToolTip="Unos cene resursa po jedinici mere" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" Margin="3" >
+            <Label Grid.Column="0" Grid.Row="1" Content="Cena:" HorizontalAlignment="Right" FontSize="17"/>
+            <TextBox Name="textBoxPrice" Validation.Error="textBoxPrice_Error" MaxLength="55"  TextChanged="textBoxPrice_TextChanged" ToolTip="Unos cene resursa po jedinici mere" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" Margin="3,3,383,3" >
                 <TextBox.Text>
                     <Binding Path="Price" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -107,8 +107,8 @@
 
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="2" Content="Ime:" />
-            <TextBox Name="textBoxName" MaxLength="55" Validation.Error="textBoxName_Error"  ToolTip="Unos imena resursa" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" Margin="3" >
+            <Label Grid.Column="0" Grid.Row="2" Content="Ime:" HorizontalAlignment="Right" FontSize="17" />
+            <TextBox Name="textBoxName" MaxLength="55" Validation.Error="textBoxName_Error"  ToolTip="Unos imena resursa" Grid.Column="1" Grid.Row="2" VerticalContentAlignment="Center" Margin="3,3,263,3" >
                 <TextBox.Text>
                     <Binding Path="Name" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -134,7 +134,7 @@
                 </Validation.ErrorTemplate>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="3" Content="Opis:" />
+            <Label Grid.Column="0" Grid.Row="3" Content="Opis:" HorizontalAlignment="Right" FontSize="17" />
             <TextBox Name="textBoxDescription" MaxLength="1100" Validation.Error="textBoxDescription_Error"  ToolTip="Unos opisa resursa" Grid.Row="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Margin="0,2,6,10" Grid.Column="1" >
                 <TextBox.Text>
                     <Binding Path="Description" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
@@ -162,11 +162,11 @@
             </TextBox>
 
 
-            <Label Grid.Column="0" Grid.Row="4" Content="Datum otkrivanja:" />
-            <DatePicker Name="datePicker" SelectedDate="{Binding Path=Date, UpdateSourceTrigger=PropertyChanged}" ToolTip="Unos datuma otkrivanja resursa" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Margin="3,14,3,10" Height="24" />
+            <Label Grid.Column="0" Grid.Row="4" Content="Datum otkrivanja:" HorizontalAlignment="Right" FontSize="17" Grid.ColumnSpan="2" Margin="0,0,438,0" Width="148"/>
+            <DatePicker Name="datePicker" SelectedDate="{Binding Path=Date, UpdateSourceTrigger=PropertyChanged}" ToolTip="Unos datuma otkrivanja resursa" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" Margin="33,6,263,19" Height="24" />
 
-            <Label Grid.Column="0" Grid.Row="5" Content="Tip resursa:" />
-            <Label Grid.Column="0" Grid.Row="6" Content="Etikete:" />
+            <Label Grid.Column="0" Grid.Row="5" Content="Tip resursa:" HorizontalAlignment="Right" FontSize="17"/>
+            <Label Grid.Column="0" Grid.Row="6" Content="Etikete:" HorizontalAlignment="Right" FontSize="17"/>
             <Grid Grid.Column="1" Grid.Row="5">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -177,18 +177,18 @@
                     <ComboBox Name="autoCompleteBoxTypes" ItemsSource="{Binding Path=Types, UpdateSourceTrigger=PropertyChanged}" ToolTip="Dovanje nekog od postojećih tipova resursa (prikazani su id-ijevi tipa resursa)"
                           DisplayMemberPath="Id"
                           SelectedValuePath="Id"
-                          SelectedValue="{Binding Path=Types}" />
+                          SelectedValue="{Binding Path=Types}" Margin="0,0,116,0" />
                 </StackPanel>
                 <StackPanel Grid.Column="0" Margin="0,36,0,-36">
                     <ComboBox x:Name="autoCompleteBoxTags" ItemsSource="{Binding Tags, UpdateSourceTrigger=PropertyChanged}" ToolTip="Dovanje nekog od postojećih etiketa resursa (prikazani su id-ijevi etiketa)"
                           DisplayMemberPath="Id"
                           SelectedValuePath="Id"
-                          SelectedValue="{Binding Tags}" />
+                          SelectedValue="{Binding Tags}" Margin="0,0,116,0" />
                 </StackPanel>
-                <Button Name="buttonAddNewType" Click="buttonAddNewType_Click" ToolTip="Dodaj novi tip resursa" Grid.Column="1" Grid.Row="0" Margin="3" Padding="10,0">
+                <Button Background="White" Name="buttonAddNewType" Click="buttonAddNewType_Click" ToolTip="Dodaj novi tip resursa" Grid.Row="0" Margin="262,0,10,6" Padding="10,0">
                     <StackPanel Orientation="Horizontal">
 
-                        <TextBlock Text="Dodaj" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="3"/>
+                        <TextBlock FontSize="17" Text="Dodaj" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="3"/>
                     </StackPanel>
                 </Button>
             </Grid>
@@ -196,46 +196,45 @@
 
 
 
-            <Label Grid.Column="0" Grid.Row="7" Content="Ikonica:" />
+            <Label Grid.Column="0" Grid.Row="7" Content="Ikonica:" HorizontalAlignment="Right" FontSize="17"/>
             <Grid Grid.Column="1" Grid.Row="7">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="100" />
                 </Grid.ColumnDefinitions>
                 <TextBox Name="textBoxIconPath" ToolTip="Polje koje sadrži lokaciju ikonice na vasem racunaru" IsReadOnly="True" Text="{Binding Path=IconPath, UpdateSourceTrigger=PropertyChanged}" VerticalContentAlignment="Center" Margin="3,3,2,3" IsEnabled="False"/>
-                <Button Name="loadIcon" Grid.Column="1" ToolTip="Kliknite da biste dodali novu ikonicu koja označava resurs" Grid.Row="0" Margin="2" Padding="15,0" Click="loadIcon_Click">
+                <Button Background="White" Name="loadIcon" Grid.Column="1" ToolTip="Kliknite da biste dodali novu ikonicu koja označava resurs" Grid.Row="0" Margin="2" Padding="15,0" Click="loadIcon_Click">
                     <StackPanel Orientation="Horizontal" Width="74">
 
-                        <TextBlock Text="Pretraži" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="3"/>
+                        <TextBlock FontSize="17" Text="Pretraži" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="3"/>
                     </StackPanel>
                 </Button>
             </Grid>
 
-            <Label Grid.Column="0" Grid.Row="8" Content="Jedinica mere:" />
-            <ComboBox Name="comboBoxMeasurementUnit" Text="{Binding Path=MeasurementUnit, UpdateSourceTrigger=PropertyChanged}" ToolTip="Odabir jedinice mere" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Margin="3,4" Height="22">
+            <Label Grid.Column="0" Grid.Row="8" Content="Jedinica mere:" HorizontalAlignment="Right" FontSize="17"/>
+            <ComboBox Name="comboBoxMeasurementUnit" Text="{Binding Path=MeasurementUnit, UpdateSourceTrigger=PropertyChanged}" ToolTip="Odabir jedinice mere" Grid.Column="1" Grid.Row="8" VerticalAlignment="Center" Margin="3,4,347,5" Height="22">
                 <ComboBoxItem>Merica</ComboBoxItem>
                 <ComboBoxItem>Barel</ComboBoxItem>
                 <ComboBoxItem>Tona</ComboBoxItem>
                 <ComboBoxItem>Kilogram</ComboBoxItem>
             </ComboBox>
 
-            <Label Grid.Column="0" Grid.Row="9" Content="Frekvencija pojavljivanja:" />
-            <ComboBox Name="comboBoxFrequency"  Text="{Binding Path=Frequency, UpdateSourceTrigger=PropertyChanged}" ToolTip="Unos ucestalosti pojavljivanja" Grid.Column="1" Grid.Row="9" VerticalAlignment="Center" Margin="3,4" Height="22">
+            <Label Grid.Column="0" Grid.Row="9" Content="Pojavljivanje:" HorizontalAlignment="Right" FontSize="17"/>
+            <ComboBox Name="comboBoxFrequency"  Text="{Binding Path=Frequency, UpdateSourceTrigger=PropertyChanged}" ToolTip="Unos ucestalosti pojavljivanja" Grid.Column="1" Grid.Row="9" VerticalAlignment="Center" Margin="3,5,347,4" Height="22">
                 <ComboBoxItem>Redak</ComboBoxItem>
                 <ComboBoxItem>Cest</ComboBoxItem>
                 <ComboBoxItem>Univerzalan</ComboBoxItem>
             </ComboBox>
 
-            <CheckBox Grid.Column="0" Grid.Row="10" Margin="0,5,10,10" Name="Obnovljiv" IsChecked="{Binding Path=Renewable, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs obnovljiv?" Content="Obnovljiv"/>
-            <CheckBox Grid.Column="0" Grid.Row="11" Margin="0,5,10,10" Name="Importance" IsChecked="{Binding Path=Importance, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs od strateske vaznosti?" Content="Strateška važnost"/>
-            <CheckBox Grid.Column="0" Grid.Row="12" Margin="0,5,10,-53" Name="AbleToExploate" IsChecked="{Binding Path=AbleToExploate, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li postoji mogucnost eksploatacije?" Content="Eksploatacija"/>
-            <Button Content="Dodaj etikete" HorizontalAlignment="Left" Margin="370,6,0,0" Grid.Row="6" VerticalAlignment="Top" Width="96" Click="ButtonTags_Click" Grid.Column="1"/>
+            <CheckBox FontSize="17" Grid.Column="0" Grid.Row="10" Margin="0,5,10,0" Name="Obnovljiv" IsChecked="{Binding Path=Renewable, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs obnovljiv?" Content="Obnovljiv"/>
+            <CheckBox FontSize="17" Grid.Column="0" Grid.Row="11" Margin="0,5,428,0" Name="Importance" IsChecked="{Binding Path=Importance, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li je resurs od strateske vaznosti?" Content="Strateška važnost" Grid.ColumnSpan="2"/>
+            <CheckBox  FontSize="17" Grid.Column="0" Grid.Row="12" Margin="0,5,0,-53" Name="AbleToExploate" IsChecked="{Binding Path=AbleToExploate, UpdateSourceTrigger=PropertyChanged}" ToolTip="Da li postoji mogucnost eksploatacije?" Content="Eksploatacija"/>
 
         </Grid>
 
 
-        <Button Background="LightGreen" x:Name="buttonSave" Margin="291,212,10,30" IsEnabled="True" ToolTip="Cuvanje novog resursa" Content="Sačuvaj"  Click="buttonSave_Click"  Padding="20,5" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
-        <Button Background="LightCoral" x:Name="buttonCancel" Margin="52,0,44,30" ToolTip="Odustajanje od unosa novog resursa" Content="Odustani" Click="buttonCancel_Click" Padding="20,5" RenderTransformOrigin="10.852,11.03" Height="50" VerticalAlignment="Bottom" Grid.Column="4" Grid.Row="1" Grid.RowSpan="2" />
+        <Button Background="LawnGreen" FontSize="17" x:Name="buttonSave" Margin="47,212,254,30" IsEnabled="True" ToolTip="Cuvanje novog resursa" Content="Sačuvaj"  Click="buttonSave_Click"  Padding="20,5" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
+        <Button Background="Red" FontSize="17" x:Name="buttonCancel" Margin="214,0,84,30" ToolTip="Odustajanje od unosa novog resursa" Content="Odustani" Click="buttonCancel_Click" Padding="20,5" RenderTransformOrigin="10.852,11.03" Height="50" VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
 
         <TextBlock x:Name="textBoxTypeError" Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Width="200" Visibility="Hidden" Text="Molimo da unesite naziv postojećeg ili dodajte novi tip resursa" Foreground="Red" VerticalAlignment="Top" Margin="5,16,0,0" Grid.Row="1" Height="32"/>
     </Grid>

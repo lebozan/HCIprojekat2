@@ -7,8 +7,8 @@
         xmlns:validation="clr-namespace:ResourcesApplication.Validation"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Edit Tag" Height="350" Width="300">
-    <Grid Background="LightGray">
+        Title="Izmena etikete" Height="350" Width="300">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -29,11 +29,11 @@
                 <RowDefinition Height="30" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Content="Id:" />
-            <Label Grid.Column="0" Grid.Row="1" Content="Color:" />
-            <Label Grid.Column="0" Grid.Row="2" Content="Description:" />
+            <Label Grid.Column="0" Grid.Row="0" Content="Id:" HorizontalAlignment="Right" FontSize="17" />
+            <Label Grid.Column="0" Grid.Row="1" Content="Boja:" HorizontalAlignment="Right" FontSize="17" />
+            <Label Grid.Column="0" Grid.Row="2" Content="Opis:" HorizontalAlignment="Right" FontSize="17"/>
 
-            <TextBox Name="textBoxId"  IsEnabled="False" Validation.Error="textBoxId_Error" ToolTip="Unos jedinstvene oznake za id"  Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" Margin="3">
+            <TextBox Background="White" Name="textBoxId"  IsEnabled="False" Validation.Error="textBoxId_Error" ToolTip="Unos jedinstvene oznake za id"  Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" Margin="3,3,140,3">
                 <TextBox.Text>
                     <Binding Path="Id" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -60,7 +60,7 @@
                     </ControlTemplate>
                 </Validation.ErrorTemplate>
             </TextBox>
-            <wpfTool:ColorPicker Name ="ColorPicker" SelectedColorChanged="ColorPicker_SelectedColorChanged"  ToolTip="Izbor boje taga" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" Margin="3"/>
+            <wpfTool:ColorPicker Name ="ColorPicker" SelectedColorChanged="ColorPicker_SelectedColorChanged"  ToolTip="Izbor boje taga" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" Margin="3,3,140,3"/>
             <TextBox Name="textBoxDescription" MaxLength="1000" TextWrapping="Wrap"  Validation.Error="textBoxDescription_Error"  AcceptsReturn="True" Grid.Column="1" Grid.Row="2" ToolTip="Unos opisa taga" VerticalScrollBarVisibility="Auto" Margin="3,3,3,10" >
                 <TextBox.Text>
                     <Binding Path="Description" UpdateSourceTrigger="LostFocus">
@@ -88,8 +88,8 @@
             </TextBox>
         </Grid>
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Margin="84,59,84,-59" >
-            <Button Name="buttonSave" IsEnabled="True"  Click="buttonSave_Click" Content="Save" Margin="0,0,0,0" Padding="10,5" Background="LightGreen" />
-            <Button x:Name="buttonCancel" Click="buttonCancel_Click" ToolTip="Odustajanje od izmene taga" Content="Cancel" Background="LightCoral" Margin="10,0,0,0" Padding="5,5" RenderTransformOrigin="0.694,2.072" />
+            <Button FontSize="17" Name="buttonSave" IsEnabled="True"  Click="buttonSave_Click" Content="Save" Margin="0,0,0,0" Padding="10,5" Background="LawnGreen" />
+            <Button FontSize="17" x:Name="buttonCancel" Click="buttonCancel_Click" ToolTip="Odustajanje od izmene etikete" Content="Cancel" Background="Red" Margin="10,0,0,0" Padding="5,5" RenderTransformOrigin="0.694,2.072" />
         </StackPanel>
     </Grid>
 </Window>

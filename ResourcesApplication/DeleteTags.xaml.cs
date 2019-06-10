@@ -43,8 +43,6 @@ namespace ResourcesApplication
         }
 
         public ResourceTag SelectedTag { get; set; }
-        public ObservableCollection<ResourceTag> TagsForUndo { get; set; }
-        public List<int> IndexesForUndo;
         public DeleteTags(TempWindow t)
         {
             tw = t;
@@ -56,14 +54,11 @@ namespace ResourcesApplication
 
             tw.database.loadData();
             Tags = tw.database.Tags;
-            TagsForUndo = new ObservableCollection<ResourceTag>();
-            IndexesForUndo = new List<int>();
 
         }
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
             ResourceTag rt = new ResourceTag(SelectedTag);
-            TagsForUndo.Add(rt);
 
             int index = 0;
             int brojac = -1;
@@ -75,7 +70,6 @@ namespace ResourcesApplication
                     index = brojac;
                 }
             }
-            IndexesForUndo.Add(index);
 
             if (SelectedTag != null)
             {
@@ -91,7 +85,7 @@ namespace ResourcesApplication
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Brisanje etikete ce prouzrokovati brisanje i manifetacija koje je poseduju. Nastavi?", "Upozorenje", System.Windows.MessageBoxButton.YesNo);
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Da li ste sigurni da zelite da obrisete izabranu etiketu?", "Upozorenje", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 ObservableCollection<Resource> resources = tw.database.Resources;
@@ -104,7 +98,6 @@ namespace ResourcesApplication
                     }
                 }
                 ResourceTag tag = new ResourceTag(SelectedTag);
-                TagsForUndo.Add(tag);
                 tw.database.DeleteTag(SelectedTag);
 
             }
@@ -151,15 +144,5 @@ namespace ResourcesApplication
             }
         }
 
-        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
-        {
-            if (TagsForUndo.Count() != 0)
-            {
-                ResourceTag tag = TagsForUndo.ElementAt(TagsForUndo.Count() - 1);
-                TagsForUndo.RemoveAt(TagsForUndo.Count() - 1);
-                Tags.Add(tag);
-                tw.database.SaveTags();
-            }
-        }
     }
 }

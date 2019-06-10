@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Prikaz Etiketa" Height="450" Width="800">
-    <Grid>
+        Title="Prikaz etiketa" Height="450" Width="800">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="50" />
@@ -24,7 +24,7 @@
 
 
         <!--Data-->
-        <DataGrid Name="tagsGrid"  AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedTag, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tags}" Margin="-3,10,10,0" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="2">
+        <DataGrid Background="Orange" Name="tagsGrid"  AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedTag, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tags}" Margin="-3,10,10,0" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Oznaka etikete" MinWidth="100" Width="*" Binding="{Binding Id}"/>
                 <DataGridTemplateColumn Header="Boja etikete">
@@ -34,7 +34,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header="Opis etikete"   MinWidth="100" Width="*" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Opis etikete"  MinWidth="100" Width="*" Binding="{Binding Description}"/>
             </DataGrid.Columns>
         </DataGrid>
 

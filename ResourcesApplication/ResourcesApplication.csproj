@@ -129,9 +129,6 @@
     <Compile Include="IdSearch.xaml.cs">
       <DependentUpon>IdSearch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapSearch.xaml.cs">
-      <DependentUpon>MapSearch.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NameSearch.xaml.cs">
       <DependentUpon>NameSearch.xaml</DependentUpon>
     </Compile>
@@ -237,10 +234,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MapSearch.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="NameSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

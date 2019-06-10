@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
         Title="Brisanje resursa" Height="450" Width="800">
-    <Grid Background="LightGray">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="50" />
@@ -22,13 +22,13 @@
 
         </Grid.ColumnDefinitions>
 
-        <DataGrid Name="resourcesGrid" MouseDoubleClick="resourcesGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedResource, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Resources}" Margin="0,12,0,97" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="resourcesGrid_SelectionChanged">
+        <DataGrid Background="Orange" Name="resourcesGrid" MouseDoubleClick="resourcesGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedResource, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Resources}" Margin="0,12,0,97" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="resourcesGrid_SelectionChanged">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Oznaka resursa" MinWidth="100" Width="*" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Naziv resursa"  MinWidth="100" Width="*" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Tip resursa"   MinWidth="100" Width="*" Binding="{Binding Type.Id}"/>
                 <DataGridTextColumn Header="Zastupljenost"   MinWidth="100" Width="*" Binding="{Binding Frequency}"/>
-                <DataGridTextColumn Header="Strateska vaznost"   MinWidth="100" Width="*" Binding="{Binding Importance}"/>
+                <DataGridTextColumn Header="Strateška važnost"   MinWidth="100" Width="*" Binding="{Binding Importance}"/>
                 <DataGridTextColumn Header="Eksploatacija"   MinWidth="100" Width="*" Binding="{Binding AbleToExploate}"/>
                 <DataGridTextColumn Header="Jedinica mere"   MinWidth="100" Width="*" Binding="{Binding MeasurementUnit}"/>
                 <DataGridTextColumn Header="Obnovljiv"   MinWidth="100" Width="*" Binding="{Binding Renewable}"/>
@@ -37,7 +37,6 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Content="Obrisi" Name="buttonDelete" ToolTip="Izbrisi odabran resurs" Grid.Row="6"  Margin="230,87,454,14" IsEnabled="False" Click="buttonDelete_Click"  Width="108"/>
-        <Button Content="Opozovi"  Margin="390,87,300,14" Grid.Row="6" Click="ButtonUndo_Click"/>
+        <Button FontSize="17" Background="Red" Content="Obriši" Name="buttonDelete" ToolTip="Obriši odabran resurs" Grid.Row="6"  Margin="323,79,361,22" IsEnabled="False" Click="buttonDelete_Click"  Width="108"/>
     </Grid>
 </Window>
