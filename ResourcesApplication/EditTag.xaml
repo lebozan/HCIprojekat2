@@ -7,7 +7,7 @@
         xmlns:validation="clr-namespace:ResourcesApplication.Validation"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Izmena etikete" Height="350" Width="300">
+        Title="Izmena etikete" Height="350" Width="400">
     <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -88,8 +88,8 @@
             </TextBox>
         </Grid>
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Margin="84,59,84,-59" >
-            <Button FontSize="17" Name="buttonSave" IsEnabled="True"  Click="buttonSave_Click" Content="Save" Margin="0,0,0,0" Padding="10,5" Background="LawnGreen" />
-            <Button FontSize="17" x:Name="buttonCancel" Click="buttonCancel_Click" ToolTip="Odustajanje od izmene etikete" Content="Cancel" Background="Red" Margin="10,0,0,0" Padding="5,5" RenderTransformOrigin="0.694,2.072" />
+            <Button FontSize="17" x:Name="buttonSave" IsEnabled="True"  Click="buttonSave_Click" Content="Sačuvaj" Margin="0,0,0,0" Padding="10,5" Background="LawnGreen" Width="83" RenderTransformOrigin="-0.449,0.546" />
+            <Button FontSize="17" x:Name="buttonCancel" Click="buttonCancel_Click" ToolTip="Odustajanje od izmene etikete" Content="Odustani" Background="Red" Margin="50,0,0,0" Padding="5,5" RenderTransformOrigin="0.694,2.072" Width="92" />
         </StackPanel>
     </Grid>
 </Window>

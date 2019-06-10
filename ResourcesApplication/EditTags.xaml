@@ -38,10 +38,10 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button FontSize="17" Content="Izmeni" Name="buttonEdit" Background="LawnGreen" ToolTip="Izmena odabrane etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="315,72,279,31" IsEnabled="False" Click="buttonEdit_Click" Height="36">
+        <Button FontSize="17" Content="Izmeni" Name="buttonEdit" Background="LawnGreen" ToolTip="Izmena odabrane etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="221,55,373,38" IsEnabled="False" Click="buttonEdit_Click" Height="46">
 
         </Button>
-
+        <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="439,55,131,38" Padding="20,5" FontSize="17" Grid.Row="6"/>
 
     </Grid>
 </Window>

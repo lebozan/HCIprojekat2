@@ -89,7 +89,7 @@
 
         <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Background="Orange">
             <Button Background="LawnGreen" Name="buttonSave" Click="buttonSave_Click" IsEnabled="False" Content="Sačuvaj" Margin="280,10,10,10" Padding="20,5" FontSize="17" />
-            <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Margin="10" Padding="20,5" FontSize="17"/>
+            <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="10" Padding="20,5" FontSize="17"/>
         </StackPanel>
 
 

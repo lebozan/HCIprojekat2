@@ -37,7 +37,7 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Content="Izmeni" Background="LawnGreen" FontSize="17" Name="buttonEdit" ToolTip="Izmena odabranog resursa" Grid.Row="6"  Margin="338,88,351,21" IsEnabled="False" Click="buttonEdit_Click"/>
-
+        <Button Content="Izmeni" Background="LawnGreen" FontSize="17" Name="buttonEdit" ToolTip="Izmena odabranog resursa" Grid.Row="6"  Margin="222,77,454,19" IsEnabled="False" Click="buttonEdit_Click"/>
+        <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="493,77,182,19" FontSize="17" Grid.Row="6" RenderTransformOrigin="0.494,-0.5"/>
     </Grid>
 </Window>

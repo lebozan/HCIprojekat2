@@ -52,11 +52,13 @@ namespace ResourcesApplication
             DataContext = this;
 
             Resources = tw.database.Resources;
-
-
-
-
         }
+
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedResource != null)

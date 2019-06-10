@@ -233,8 +233,8 @@
         </Grid>
 
 
-        <Button Background="LawnGreen" FontSize="17" x:Name="buttonSave" Margin="47,212,254,30" IsEnabled="True" ToolTip="Cuvanje novog resursa" Content="Sačuvaj"  Click="buttonSave_Click"  Padding="20,5" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
-        <Button Background="Red" FontSize="17" x:Name="buttonCancel" Margin="214,0,84,30" ToolTip="Odustajanje od unosa novog resursa" Content="Odustani" Click="buttonCancel_Click" Padding="20,5" RenderTransformOrigin="10.852,11.03" Height="50" VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
+        <Button Background="LawnGreen" FontSize="17" x:Name="buttonSave" Margin="47,212,239,30" IsEnabled="True" ToolTip="Cuvanje novog resursa" Content="Sačuvaj"  Click="buttonSave_Click"  Padding="20,5" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
+        <Button Background="Red" FontSize="17" x:Name="buttonCancel" Margin="214,0,65,30" ToolTip="Odustajanje od unosa novog resursa" Content="Odustani" Click="buttonCancel_Click" Padding="20,5" RenderTransformOrigin="10.852,11.03" Height="50" VerticalAlignment="Bottom" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" />
 
         <TextBlock x:Name="textBoxTypeError" Grid.Column="4" HorizontalAlignment="Left" TextWrapping="Wrap" Width="200" Visibility="Hidden" Text="Molimo da unesite naziv postojećeg ili dodajte novi tip resursa" Foreground="Red" VerticalAlignment="Top" Margin="5,16,0,0" Grid.Row="1" Height="32"/>
     </Grid>
