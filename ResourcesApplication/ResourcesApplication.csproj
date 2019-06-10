@@ -292,6 +292,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Html\slika11.png" />
+    <Resource Include="Html\slika12.png" />
+    <Resource Include="Html\slika13.png" />
+    <Resource Include="Html\slika14.png" />
+    <Resource Include="Html\slika10.png" />
+    <Resource Include="Html\slika7.png" />
+    <Resource Include="Html\slika8.png" />
+    <Resource Include="Html\slika9.png" />
+    <Resource Include="Html\slika3.png" />
+    <Resource Include="Html\slika4.png" />
+    <Resource Include="Html\slika5.png" />
+    <Resource Include="Html\slika6.png" />
+    <Resource Include="Html\slika1.png" />
+    <Resource Include="Html\slika2.png" />
     <Resource Include="Maps\background.jpg" />
     <Resource Include="Icons\FireIcon2.png" />
     <Resource Include="Icons\ForestIcon2.png" />
@@ -304,21 +318,6 @@
     <Resource Include="Icons\TutorialIcon.png" />
     <Resource Include="Icons\DocumentIcon.png" />
     <Resource Include="Icons\FireIcon.png" />
-    <Content Include="Html\BrisanjeEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\BrisanjeResursa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\BrisanjeTipa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\DodavanjeEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\DodavanjeTipa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Html\error.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -327,32 +326,7 @@
     <Resource Include="Maps\world-map-big_02.gif" />
     <Resource Include="Maps\world-map-big_03.gif" />
     <Resource Include="Maps\world-map-big_04.gif" />
-    <Content Include="Html\GlavniProzorAplikacije.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\IzmenaEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\IzmenaResursa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\IzmenaTipa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Html\MainWindow.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PocetniProzorAplikacije.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PrikazEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Html\PrikazResursa.PNG" />
-    <Content Include="Html\PrikazResursa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PrikazTipa.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Html\Resource.html">
