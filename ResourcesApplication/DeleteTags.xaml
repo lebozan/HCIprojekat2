@@ -38,8 +38,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Background="Red" FontSize="17" Content="Obriši" Name="buttonDelete" ToolTip="Obrisi odabranu etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="318,75,276,34" IsEnabled="False" Click="buttonDelete_Click" Height="30">
+        <Button Background="Red" FontSize="17" Content="Obriši" Name="buttonDelete" ToolTip="Obrisi odabranu etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="161,64,418,32" IsEnabled="False" Click="buttonDelete_Click" Height="43">
         </Button>
-
+        <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="491,64,91,32" FontSize="17" Grid.Row="6" RenderTransformOrigin="0.494,-0.5"/>
     </Grid>
 </Window>

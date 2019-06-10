@@ -98,9 +98,10 @@ namespace ResourcesApplication
             buttonDelete_Click(null, null);
         }
 
-
-
-
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 

@@ -103,6 +103,11 @@ namespace ResourcesApplication
             }
         }
 
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
         private bool resourcesHaveTag(string Id)
         {
             foreach (var res in tw.database.Resources)
