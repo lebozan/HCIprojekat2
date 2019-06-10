@@ -9,15 +9,14 @@
         Title="Mapa" Height="650" Width="1050">
     <DockPanel>
 
-        <Grid RenderTransformOrigin="0.501,0.492">
+        <Grid RenderTransformOrigin="0.5,0.5">
             <Grid.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Maps/background.jpg" AlignmentY="Top" AlignmentX="Center"/>
             </Grid.Background>
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="230" />
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="230"/>
+                <RowDefinition Height="230*" />
+                <RowDefinition Height="230*"/>
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -27,28 +26,27 @@
                 <ColumnDefinition Width="320" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-
-            <Button Name="worldButton" ToolTip="Prikaz mape sveta deo 1" Grid.Column="1" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="worldButton_Click">
-                <StackPanel >
-                    <Image Name="World" Height="230" Width="320" Source="Maps/world-map-big_01.gif"/>
+            <Button Name="mapa1Button" ToolTip="Prikaz mape sveta deo 1" Grid.Column="1" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="Mapa1Button_Click">
+                <StackPanel>
+                    <Image Name="mapa1" Height="275" Width="320" Stretch="Fill" Source="Maps/world-map-big_01.gif"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="southAmericaButton" ToolTip="Prikaz mape sveta deo 2" Grid.Column="3" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="europeButton_Click">
-                <StackPanel >
-                    <Image Name="SouthAmerica" Height="230" Width="320" Source="Maps/world-map-big_02.gif"/>
+            <Button Name="mapa2Button" ToolTip="Prikaz mape sveta deo 2" Grid.Column="3" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="Mapa2Button_Click">
+                <StackPanel>
+                    <Image Name="mapa2" Height="275" Width="320" Stretch="Fill" Source="Maps/world-map-big_02.gif"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="europeButton" ToolTip="Prikaz mape sveta deo 3" Grid.Column="1" Grid.Row="3" Background="Transparent" BorderThickness="0" Click="americaButton_Click">
+            <Button Name="mapa3Button" ToolTip="Prikaz mape sveta deo 3" Grid.Column="1" Grid.Row="2" Background="Transparent" BorderThickness="0" Click="Mapa3Button_Click">
                 <StackPanel >
-                    <Image Name="Europe" Height="230" Width="320" Source="Maps/world-map-big_03.gif"/>
+                    <Image Name="mapa3" Height="275" Width="320" Stretch="Fill" Source="Maps/world-map-big_03.gif"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="asiaButton" ToolTip="Prikaz mape sveta deo 4" Grid.Column="3" Grid.Row="3" Background="Transparent" BorderThickness="0" Click="asiaButton_Click">
-                <StackPanel >
-                    <Image Name="Africa" Height="230" Width="320" Source="Maps/world-map-big_04.gif"/>
+            <Button Name="asiaButton" ToolTip="Prikaz mape sveta deo 4" Grid.Column="3" Grid.Row="2" Background="Transparent" BorderThickness="0" Click="Mapa4Button_Click">
+                <StackPanel> 
+                    <Image Name="mapa4" Height="275" Width="320" Stretch="Fill" Source="Maps/world-map-big_04.gif"/>
                 </StackPanel>
             </Button>
         </Grid>

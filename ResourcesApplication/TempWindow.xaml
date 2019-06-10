@@ -28,15 +28,16 @@
         <CommandBinding Command="cmd:RoutedCommands.SearchTag" Executed="SearchTag_Executed"/>
         <CommandBinding Command="cmd:RoutedCommands.Filter" Executed="Filter_Executed"/>
         <CommandBinding Command="cmd:RoutedCommands.ShowAll" Executed="ShowAll_Executed"/>
+        <CommandBinding Command="cmd:RoutedCommands.PrikaziDokumentaciju" Executed="Help_Executed"/>
     </Window.CommandBindings>
-    <DockPanel>
+    <DockPanel LastChildFill="True">
         <Menu DockPanel.Dock ="Top" Height="25">
             <Menu.ItemsPanel>
                 <ItemsPanelTemplate>
                     <DockPanel HorizontalAlignment="Stretch"></DockPanel>
                 </ItemsPanelTemplate>
             </Menu.ItemsPanel>
-            <MenuItem Header=" Resursi" ToolTip="Prikaz svih opcija za manipulisanje resursima">
+            <MenuItem Header="Resursi" ToolTip="Prikaz svih opcija za manipulisanje resursima">
                 <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog resursa" Command="cmd:RoutedCommands.AddResource" InputGestureText="Ctrl+D">
                     <MenuItem.Icon>
                         <Image Source="Icons\AddIcon.png" Width="12" Height="12"/>
@@ -61,8 +62,6 @@
                 </MenuItem>
                 <Separator></Separator>
             </MenuItem>
-
-
 
             <MenuItem Header=" Tipovi resursa" ToolTip="Prikaz svih opcija za manipulisanje tipovima resursa">
                 <MenuItem Header=" Dodaj" ToolTip="Dodavanje novog tipa resursa" Command="cmd:RoutedCommands.AddType" InputGestureText="Alt+D">
@@ -143,7 +142,7 @@
                 <Separator></Separator>
             </MenuItem>
             <MenuItem Header=" Pomoć" ToolTip="Prikaz pomoćne dokumentacije" HorizontalAlignment="Left">
-                <MenuItem Header="_Dokumentacija" InputGestureText="F1" Click="Help_Click">
+                <MenuItem Header="_Dokumentacija" InputGestureText="F1" Command="cmd:RoutedCommands.PrikaziDokumentaciju" Click="Help_Click">
                     <MenuItem.Icon>
                         <Image Source="Icons\DocumentIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
@@ -155,57 +154,39 @@
                         </StackPanel>
                     </MenuItem.ToolTip>
                 </MenuItem>
-                <MenuItem Name="Tutorial" Header="_Tutorial" InputGestureText="F2">
+                <!--<MenuItem Name="Tutorial" Header="_Tutorial" InputGestureText="F2">
                     <MenuItem.Icon>
                         <Image Source="Icons\TutorialIcon.png" Width="12" Height="12"/>
                     </MenuItem.Icon>
-                </MenuItem>
+                </MenuItem>-->
             </MenuItem>
         </Menu>
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250" />
-                <ColumnDefinition Width="123*" />
-                <ColumnDefinition Width="389*"/>
-            </Grid.ColumnDefinitions>
+        <ListView DockPanel.Dock="Left" Name="listView" SelectedItem="{Binding Path=SelectedResource}" ItemsSource="{Binding Path=ResourcesToShow}"  Width="200" Margin="0,0,-2,0" Background="Azure" SelectionChanged="listView_SelectionChanged" PreviewMouseLeftButtonDown="ListView_PreviewMouseLeftButtonDown" MouseMove="ListView_MouseMove">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Image Source="{Binding IconPath}" Height="30" Width="30" Margin="0,0,5,0" HorizontalAlignment="Left"/>
+                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center"/>
+                                </StackPanel>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <ScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Auto" >
+            <Canvas Name="Map" AllowDrop="True" Grid.Column="1" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop" MouseWheel="MapZoom_OnMouseWheel">
+                        <Canvas.Background>
+                            <ImageBrush ImageSource="Maps\placeholder.jpg" AlignmentX="Left" AlignmentY="Top" Stretch="Fill"/>
+                        </Canvas.Background>
+                        <Canvas.ContextMenu>
+                            <ContextMenu Name="contextMenu">
+                                <MenuItem Header="Nalepi resurs" Click="paste_Click">
+                                </MenuItem>
+                            </ContextMenu>
+                        </Canvas.ContextMenu>
+                    </Canvas>
+                </ScrollViewer>
 
-
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Vertical" Height="Auto" Grid.Column="0" Background="Black" Margin="0,0,0.6,-0.2">
-
-                <GroupBox ToolTip="Lista resursa koji mogu biti dodati na mapu" Header="Resursi" Height="670" Margin="10,0" Foreground="White" >
-                    <!--PreviewMouseLeftButtonDown="ListView_PreviewMouseLeftButtonDown" MouseMove="ListView_MouseMove"-->
-                    <ListView Name="listView" SelectedItem="{Binding Path=SelectedResource}" ItemsSource="{Binding Path=ResourcesToShow}"  Margin="0,0,-2,0" Background="Black" SelectionChanged="listView_SelectionChanged" PreviewMouseLeftButtonDown="ListView_PreviewMouseLeftButtonDown" MouseMove="ListView_MouseMove">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <WrapPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <Image Source="{Binding IconPath}" Height="30" Width="30" Margin="0,0,5,0" HorizontalAlignment="Left"/>
-                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="White" VerticalAlignment="Center"/>
-                                    </StackPanel>
-                                </WrapPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
-                </GroupBox>
-            </StackPanel>
-            
-            
-            <!-- Mouse.PreviewMouseDown="Map_PreviewMouseLeftButtonDown" MouseRightButtonDown="Map_MouseRightButtonDown" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop"-->
-            <ScrollViewer Grid.Column="1" Grid.ColumnSpan="2" CanContentScroll="True" HorizontalScrollBarVisibility="Auto" MouseMove="Map_MouseMove" DragEnter="Map_DragEnter" Drop="Map_Drop" MouseWheel="UIElement_OnMouseWheel">
-                <Canvas Name="Map" AllowDrop="True" Grid.Column="1" >
-                    <Canvas.Background>
-                        <ImageBrush ImageSource="Maps\world_map.png" AlignmentX="Left" AlignmentY="Top" Stretch="None"/>
-                    </Canvas.Background>
-                    <Canvas.ContextMenu>
-                        <ContextMenu Name="contextMenu">
-                            <MenuItem Header="Nalepi kopiran resurs" Click="paste_Click">
-                            </MenuItem>
-                        </ContextMenu>
-                    </Canvas.ContextMenu>
-                </Canvas>
-                
-            </ScrollViewer>
-        </Grid>
     </DockPanel>
 </Window>

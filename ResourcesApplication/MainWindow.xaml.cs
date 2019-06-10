@@ -83,5 +83,15 @@ namespace ResourcesApplication
             tag.Map.Background = imgB;
             tag.Show();
         }
+
+        private void WorldButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AsiaButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

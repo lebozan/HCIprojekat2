@@ -23,10 +23,9 @@ namespace ResourcesApplication.Html
         public HtmlHelp(string key, Window originator)
         {
             InitializeComponent();
+            
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            Console.WriteLine("TRENUTNI FOLDER:"+Directory.GetCurrentDirectory());
             string path = string.Format("{0}/Html/{1}.html", Directory.GetCurrentDirectory(), key);
-            Console.WriteLine("OVDE SAM OVO MI JE PUTANJA:"+path);
             if (!File.Exists(path))
                 key = "Error";
 

@@ -292,6 +292,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Maps\placeholder.jpg" />
     <Resource Include="Html\slika11.png" />
     <Resource Include="Html\slika12.png" />
     <Resource Include="Html\slika13.png" />

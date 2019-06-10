@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResourcesApplication.Html"
         mc:Ignorable="d"
-        Title="HtmlHelp" Height="300" Width="300">
+        Title="HtmlHelp" Height="500" Width="500">
     <Grid>
         <WebBrowser Name="HelpBrowser"></WebBrowser>
     </Grid>

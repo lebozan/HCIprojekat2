@@ -105,7 +105,10 @@ namespace ResourcesApplication
             addToResourcesToShow();
             ResourcePins_Draw();
         }
+        private void PrikaziDokumentaciju_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
 
+        }
         private void AddResource_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             AddResource addResource = new AddResource(this);

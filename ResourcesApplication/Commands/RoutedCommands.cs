@@ -181,6 +181,16 @@ namespace ResourcesApplication.Commands
                 }
                 );
 
+        public static readonly RoutedUICommand PrikaziDokumentaciju = new RoutedUICommand(
+           "Prikazi dokumentaciju",
+           "PrikaziDokumentaciju",
+           typeof(RoutedCommand),
+           new InputGestureCollection()
+           {
+            new KeyGesture(Key.F1, ModifierKeys.None)
+           }
+           );
+
     }
 
 
