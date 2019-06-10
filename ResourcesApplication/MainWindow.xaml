@@ -34,13 +34,13 @@
                 </StackPanel>
             </Button>
 
-            <Button Name="southAmericaButton" ToolTip="Prikaz mape sveta deo 2" Grid.Column="3" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="americaButton_Click">
+            <Button Name="southAmericaButton" ToolTip="Prikaz mape sveta deo 2" Grid.Column="3" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="europeButton_Click">
                 <StackPanel >
                     <Image Name="SouthAmerica" Height="230" Width="320" Source="Maps/world-map-big_02.gif"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="europeButton" ToolTip="Prikaz mape sveta deo 3" Grid.Column="1" Grid.Row="3" Background="Transparent" BorderThickness="0" Click="europeButton_Click">
+            <Button Name="europeButton" ToolTip="Prikaz mape sveta deo 3" Grid.Column="1" Grid.Row="3" Background="Transparent" BorderThickness="0" Click="americaButton_Click">
                 <StackPanel >
                     <Image Name="Europe" Height="230" Width="320" Source="Maps/world-map-big_03.gif"/>
                 </StackPanel>

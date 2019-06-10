@@ -56,7 +56,10 @@ namespace ResourcesApplication
             buttonEditt_Click(null, null);
         }
 
-
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
         private void buttonEditt_Click(object sender, RoutedEventArgs e)
         {
