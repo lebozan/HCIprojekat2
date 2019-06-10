@@ -293,6 +293,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Html\Search.html" />
+    <Resource Include="Maps\placeholder.jpg" />
     <Resource Include="Html\slika15.png" />
     <Resource Include="Html\slika16.png" />
     <Resource Include="Html\slika17.png" />
