@@ -292,6 +292,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Html\Search.html" />
+    <Resource Include="Html\slika15.png" />
+    <Resource Include="Html\slika16.png" />
+    <Resource Include="Html\slika17.png" />
+    <Resource Include="Html\slika18.png" />
     <Resource Include="Html\slika11.png" />
     <Resource Include="Html\slika12.png" />
     <Resource Include="Html\slika13.png" />

@@ -24,10 +24,8 @@ namespace ResourcesApplication.Html
         {
             InitializeComponent();
             WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
-            Console.WriteLine("TRENUTNI FOLDER:"+Directory.GetCurrentDirectory());
-            string path = string.Format("{0}/Html/{1}.html", Directory.GetCurrentDirectory(), key);
-            Console.WriteLine("OVDE SAM OVO MI JE PUTANJA:"+path);
-            if (!File.Exists(path))
+            string putanja = string.Format("{0}/Html/{1}.html", Directory.GetCurrentDirectory(), key);
+            if (!File.Exists(putanja))
                 key = "Error";
 
             Uri url = new Uri(string.Format("file:///{0}/Html/{1}.html", Directory.GetCurrentDirectory(), key));
