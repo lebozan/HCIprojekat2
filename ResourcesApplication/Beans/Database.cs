@@ -12,8 +12,8 @@ namespace ResourcesApplication.Beans
     [Serializable]
     public class Database : INotifyPropertyChanged
     {
-        public SerializationService ser { get; set; }
-        public DeserializationService der { get; set; }
+        public SerializationService serijalizacija { get; set; }
+        public DeserializationService deserijalizacija { get; set; }
 
 
         private ObservableCollection<Resource> resources;
@@ -77,8 +77,8 @@ namespace ResourcesApplication.Beans
 
         public Database()
         {
-            ser = new SerializationService();
-            der = new DeserializationService();
+            serijalizacija = new SerializationService();
+            deserijalizacija = new DeserializationService();
             resources = new ObservableCollection<Resource>();
             allResources = new ObservableCollection<Resource>();
             types = new ObservableCollection<ResourceType>();
@@ -88,18 +88,18 @@ namespace ResourcesApplication.Beans
 
         public void SaveResources()
         {
-            ser.serializeResource(resources);
-            ser.serializeAllResources(allResources);
+            serijalizacija.serializeResource(resources);
+            serijalizacija.serializeAllResources(allResources);
         }
 
         public void SaveTypes()
         {
-            ser.serializeTypes(types);
+            serijalizacija.serializeTypes(types);
         }
 
         public void SaveTags()
         {
-            ser.serializeTags(tags);
+            serijalizacija.serializeTags(tags);
         }
 
         public void AddResource(Resource resource)
@@ -240,10 +240,10 @@ namespace ResourcesApplication.Beans
 
         public void loadData()
         {
-            der.deserializeTags(this);
-            der.deserializeTypes(this);
-            der.deserializeResources(this);
-            der.deserializeAllResources(this);
+            deserijalizacija.deserializeTags(this);
+            deserijalizacija.deserializeTypes(this);
+            deserijalizacija.deserializeResources(this);
+            deserijalizacija.deserializeAllResources(this);
         }
 
 

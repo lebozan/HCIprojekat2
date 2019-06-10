@@ -8,8 +8,7 @@
         mc:Ignorable="d"
          xmlns:validation="clr-namespace:ResourcesApplication.Validation"
         xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
-        Title="Dodavanje resursa" Height="550
-        " Width="800">
+        Title="Dodavanje resursa" Height="550" Width="800">
 
     <Grid Background="LightGray">
         <Grid.RowDefinitions>
@@ -24,7 +23,6 @@
             <ColumnDefinition Width="408*"/>
             <ColumnDefinition Width="206" />
         </Grid.ColumnDefinitions>
-
 
         <Grid Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="4">
             <Grid.ColumnDefinitions>

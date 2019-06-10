@@ -31,12 +31,7 @@ namespace ResourcesApplication
         private Double zoomMin = 0.5;
         private Double zoomSpeed = 0.001;
         private Double zoom = 1;
-        /*
-         *  WORLD
-         *  AMERICA
-         *  EUROPE
-         *  ASIA
-         */
+
         public Database database { get; set; }
         private ObservableCollection<Resource> resources;
         public ObservableCollection<Resource> Resources
@@ -99,8 +94,8 @@ namespace ResourcesApplication
         {
             InitializeComponent();
             database = new Database();
-            database.ser.RESOURCES_DATA = map + ".bin";
-            database.der.RESOURCES_DATA = map + ".bin";
+            database.serijalizacija.RESOURCES_DATA = map + ".bin";
+            database.deserijalizacija.RESOURCES_DATA = map + ".bin";
             database.loadData();
             CURRENT_MAP = map;
 
@@ -116,8 +111,6 @@ namespace ResourcesApplication
             AddResource addResource = new AddResource(this);
             addResource.Show();
             addToResourcesToShow();
-
-
         }
 
         public void addToResourcesToShow()
@@ -252,11 +245,9 @@ namespace ResourcesApplication
         }
         private Point startPoint = new Point();
 
-
         private void Map_MouseMove(object sender, MouseEventArgs e)
 
         {
-            Console.WriteLine("TRECI");
             Point mousePosition = e.GetPosition(Map);
             Vector diff = startPoint - mousePosition;
 
@@ -278,7 +269,7 @@ namespace ResourcesApplication
 
         private void Map_DragEnter(object sender, DragEventArgs e)
         {
-            Console.WriteLine("CETVRTI");
+
             if (!e.Data.GetDataPresent("resource") || sender == e.Source)
             {
                 e.Effects = DragDropEffects.None;
@@ -287,7 +278,6 @@ namespace ResourcesApplication
 
         private void Map_Drop(object sender, DragEventArgs e)
         {
-            Console.WriteLine("PETI");
             if (e.Data.GetDataPresent("resource"))
             {
                 Point dropPosition = e.GetPosition(Map);
@@ -323,21 +313,8 @@ namespace ResourcesApplication
             }
         }
 
-        private void UIElement_OnMouseWheel(object sender, MouseWheelEventArgs e)
+        private void MapZoom_OnMouseWheel(object sender, MouseWheelEventArgs e)
         {
-            //var matrix = Map.LayoutTransform.Value;
-
-            //if (e.Delta > 0)
-            //{
-            //    matrix.ScaleAt(1.2, 1.2, e.GetPosition(this).X, e.GetPosition(this).Y);
-            //}
-            //else
-            //{
-            //    matrix.ScaleAt(1.0 / 1.2, 1.0 / 1.2, e.GetPosition(this).X, e.GetPosition(this).Y);
-            //}
-
-            //Map.LayoutTransform = new MatrixTransform(matrix);
-
             zoom += zoomSpeed * e.Delta; // Ajust zooming speed (e.Delta = Mouse spin value )
             if (zoom < zoomMin) { zoom = zoomMin; } // Limit Min Scale
             if (zoom > zoomMax) { zoom = zoomMax; } // Limit Max Scale
@@ -362,7 +339,6 @@ namespace ResourcesApplication
 
         private void ListView_MouseMove(object sender, MouseEventArgs e)
         {
-            Console.WriteLine("SEDMO");
             Point mousePosition = e.GetPosition(null);
             Vector diff = startPoint - mousePosition;
 
@@ -374,7 +350,6 @@ namespace ResourcesApplication
                 {
                     ListView listView = sender as ListView;
                     Resource resource = SelectedResource;
-                    Console.WriteLine("FOUND RESOURCE SELECTED " + SelectedResource.Id);
                     DataObject dragData = new DataObject("resource", resource);
                     DragDrop.DoDragDrop(listView, dragData, DragDropEffects.Move);
                     if (ResourcesToShow != null)
@@ -469,8 +444,8 @@ namespace ResourcesApplication
             {
                 if (resource.X != -1 && resource.Y != -1)
                 {
-                    Console.WriteLine("OD PRONADJENOG X i Y su " + resource.X + " " + resource.Y);
-                    Console.WriteLine("OD PRONADJ " + resource.Id);
+                    //Console.WriteLine("OD PRONADJENOG X i Y su " + resource.X + " " + resource.Y);
+                    //Console.WriteLine("OD PRONADJ " + resource.Id);
                     Image ResourceIcon = new Image();
                     ResourceIcon.Width = 30;
                     ResourceIcon.Height = 30;

@@ -14,8 +14,8 @@ namespace ResourcesApplication.Validation
         public override ValidationResult Validate(object value, System.Globalization.CultureInfo cultureInfo)
         {
             Database db = new Database();
-            db.ser.RESOURCES_DATA = "resources.bin";
-            db.der.RESOURCES_DATA = "resources.bin";
+            db.serijalizacija.RESOURCES_DATA = "resources.bin";
+            db.deserijalizacija.RESOURCES_DATA = "resources.bin";
             db.loadData();
             try
             {

@@ -1,22 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using ResourcesApplication.Beans;
 
 namespace ResourcesApplication
@@ -28,18 +16,18 @@ namespace ResourcesApplication
     {
 
         public TempWindow tw { get; set; }
-        private ObservableCollection<Resource> resources;
+        private ObservableCollection<Resource> _resources;
 
         public ObservableCollection<Resource> Resources
         {
-            get { return resources; }
+            get { return _resources; }
             set
             {
-                if (value != resources)
+                if (value != _resources)
                 {
 
 
-                    resources = value;
+                    _resources = value;
                     OnPropertyChanged("Resources");
 
 
@@ -49,24 +37,13 @@ namespace ResourcesApplication
             }
         }
 
-
-
-
-
-
-
         public ObservableCollection<Resource> ResourcesForUndo
         {
 
             get; set;
         }
 
-
-
-
-
         public Resource SelectedResource { get; set; }
-
 
         public int OldCount { get; set; }
         public int NewCount { get; set; }

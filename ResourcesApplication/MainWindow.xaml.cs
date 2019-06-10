@@ -28,57 +28,57 @@ namespace ResourcesApplication
             InitializeComponent();
         }
 
-        private void worldButton_Click(object sender, RoutedEventArgs e)
+        private void Mapa1Button_Click(object sender, RoutedEventArgs e)
         {
 
-            string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_01.gif");
-            TempWindow tag = new TempWindow("WORLD");
+            string trenutni = System.IO.Directory.GetCurrentDirectory();
+            string putanja = System.IO.Path.Combine(trenutni, "Maps/world-map-big_01.gif");
+            TempWindow tag = new TempWindow("Mapa1");
 
             ImageBrush imgB = new ImageBrush();
-            imgB.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri(path, UriKind.Relative));
+            imgB.ImageSource = new BitmapImage(new Uri(putanja, UriKind.Relative));
 
             tag.Map.Background = imgB;
             tag.Show();
         }
 
-        private void europeButton_Click(object sender, RoutedEventArgs e)
+        private void Mapa2Button_Click(object sender, RoutedEventArgs e)
         {
 
-            string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_02.gif");
-            TempWindow tag = new TempWindow("EUROPE");
+            string trenutni = System.IO.Directory.GetCurrentDirectory();
+            string putanja = System.IO.Path.Combine(trenutni, "Maps/world-map-big_02.gif");
+            TempWindow tag = new TempWindow("Mapa2");
 
             ImageBrush imgB = new ImageBrush();
-            imgB.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri(path, UriKind.Relative));
+            imgB.ImageSource = new BitmapImage(new Uri(putanja, UriKind.Relative));
 
             tag.Map.Background = imgB;
             tag.Show();
         }
 
-        private void americaButton_Click(object sender, RoutedEventArgs e)
+        private void Mapa3Button_Click(object sender, RoutedEventArgs e)
         {
 
-            string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_03.gif");
-            TempWindow tag = new TempWindow("AMERICA");
+            string trenutni = System.IO.Directory.GetCurrentDirectory();
+            string putanja = System.IO.Path.Combine(trenutni, "Maps/world-map-big_03.gif");
+            TempWindow tag = new TempWindow("Mapa3");
 
             ImageBrush imgB = new ImageBrush();
-            imgB.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri(path, UriKind.Relative));
+            imgB.ImageSource = new BitmapImage(new Uri(putanja, UriKind.Relative));
 
             tag.Map.Background = imgB;
             tag.Show();
         }
 
-        private void asiaButton_Click(object sender, RoutedEventArgs e)
+        private void Mapa4Button_Click(object sender, RoutedEventArgs e)
         {
 
-            string currentDirectory = System.IO.Directory.GetCurrentDirectory();
-            string path = System.IO.Path.Combine(currentDirectory, "Maps/world-map-big_04.gif");
-            TempWindow tag = new TempWindow("ASIA");
+            string trenutni = System.IO.Directory.GetCurrentDirectory();
+            string putanja = System.IO.Path.Combine(trenutni, "Maps/world-map-big_04.gif");
+            TempWindow tag = new TempWindow("Mapa4");
 
             ImageBrush imgB = new ImageBrush();
-            imgB.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri(path, UriKind.Relative));
+            imgB.ImageSource = new BitmapImage(new Uri(putanja, UriKind.Relative));
 
             tag.Map.Background = imgB;
             tag.Show();
