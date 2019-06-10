@@ -180,11 +180,11 @@
                           SelectedValue="{Binding Path=Types}" Margin="0,0,116,0" />
                 </StackPanel>
                 <StackPanel Grid.Column="0" Margin="0,36,0,-36">
-                    <ComboBox x:Name="autoCompleteBoxTags" ItemsSource="{Binding Tags, UpdateSourceTrigger=PropertyChanged}" ToolTip="Dovanje nekog od postojećih etiketa resursa (prikazani su id-ijevi etiketa)"
+                    <ComboBox x:Name="autoCompleteBoxTags" ItemsSource="{Binding Path=Tags, UpdateSourceTrigger=PropertyChanged}" ToolTip="Dovanje nekog od postojećih etiketa resursa (prikazani su id-ijevi etiketa)"
                           DisplayMemberPath="Id"
                           SelectedValuePath="Id"
-                          SelectedValue="{Binding Tags}" Margin="0,0,116,0" />
-                </StackPanel>
+                          SelectedValue="{Binding Path=Tags}" Margin="0,0,116,0" />
+                </StackPanel> 
                 <Button Background="White" Name="buttonAddNewType" Click="buttonAddNewType_Click" ToolTip="Dodaj novi tip resursa" Grid.Row="0" Margin="262,0,10,6" Padding="10,0">
                     <StackPanel Orientation="Horizontal">
 

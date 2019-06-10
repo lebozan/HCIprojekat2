@@ -71,7 +71,7 @@ namespace ResourcesApplication
             Resource.Y = -1;
 
             autoCompleteBoxTypes.DataContext = tw.database;
-            // autoCompleteBoxTags.DataContext = Database.getInstance();
+            autoCompleteBoxTags.DataContext = tw.database;
 
             DataContext = Resource;
 
