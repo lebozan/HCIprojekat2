@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
         Title="Brisanje etiketa" Height="450" Width="800">
-    <Grid Background="LightGray">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="50" />
@@ -24,7 +24,7 @@
 
 
         <!--Data-->
-        <DataGrid Name="tagsGrid" MouseDoubleClick="tagsGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedTag, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tags}" Margin="0,12,0,125" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="tagsGrid_SelectionChanged" Grid.ColumnSpan="2">
+        <DataGrid Background="Orange" Name="tagsGrid" MouseDoubleClick="tagsGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedTag, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tags}" Margin="0,12,0,125" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="tagsGrid_SelectionChanged" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Oznaka etikete" MinWidth="100" Width="*" Binding="{Binding Id}"/>
                 <DataGridTemplateColumn Header="Boja etikete">
@@ -38,12 +38,8 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Name="buttonDelete" ToolTip="Obrisi odabranu etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="271,75,323,34" IsEnabled="False" Click="buttonDelete_Click" Height="30">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Obrisi" VerticalAlignment="Center" HorizontalAlignment="Right" Padding="3" RenderTransformOrigin="0.674,4.002"/>
-            </StackPanel>
+        <Button Background="Red" FontSize="17" Content="Obriši" Name="buttonDelete" ToolTip="Obrisi odabranu etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="161,64,418,32" IsEnabled="False" Click="buttonDelete_Click" Height="43">
         </Button>
-        <Button  Content="Opozovi brisanje" ToolTip="Opozovi prethodno brisanje" HorizontalAlignment="Left" Margin="413,75,0,0" Grid.Row="6" VerticalAlignment="Top" Width="98" Click="ButtonUndo_Click" Height="28"/>
-
+        <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="491,64,91,32" FontSize="17" Grid.Row="6" RenderTransformOrigin="0.494,-0.5"/>
     </Grid>
 </Window>

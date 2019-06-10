@@ -30,8 +30,6 @@ namespace ResourcesApplication
         }
 
         public ResourceTag SelectedTag { get; set; }
-        public ObservableCollection<ResourceTag> TagsForUndo { get; set; }
-        public List<int> IndexesForUndo;
         public EditTags(TempWindow t)
         {
             tw = t;
@@ -43,14 +41,11 @@ namespace ResourcesApplication
 
             t.database.loadData();
             Tags = t.database.Tags;
-            TagsForUndo = new ObservableCollection<ResourceTag>();
-            IndexesForUndo = new List<int>();
 
         }
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
             ResourceTag rt = new ResourceTag(SelectedTag);
-            TagsForUndo.Add(rt);
 
             int index = 0;
             int brojac = -1;
@@ -62,7 +57,6 @@ namespace ResourcesApplication
                     index = brojac;
                 }
             }
-            IndexesForUndo.Add(index);
 
             if (SelectedTag != null)
             {
@@ -76,6 +70,10 @@ namespace ResourcesApplication
 
         }
 
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
         private bool resourcesHaveTag(string Id)
         {
@@ -118,21 +116,5 @@ namespace ResourcesApplication
             }
         }
 
-        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
-        {
-            if (TagsForUndo.Count() != 0)
-            {
-                int position = IndexesForUndo.Count() - 1;
-
-                ResourceTag type = TagsForUndo.ElementAt(TagsForUndo.Count() - 1);
-                TagsForUndo.RemoveAt(TagsForUndo.Count() - 1);
-                int positionForInsert = IndexesForUndo.ElementAt(position);
-                Tags.Insert(positionForInsert, type);
-                Tags.RemoveAt(positionForInsert + 1);
-                IndexesForUndo.RemoveAt(position);
-                tw.database.SaveTags();
-
-            }
-        }
     }
 }

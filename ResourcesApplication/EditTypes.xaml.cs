@@ -37,7 +37,6 @@ namespace ResourcesApplication
                 }
             }
         }
-        public ObservableCollection<ResourceType> TypesForUndo { get; set; }
         public List<int> IndexesForUndo;
         public EditTypes(TempWindow t)
         {
@@ -48,7 +47,6 @@ namespace ResourcesApplication
             DataContext = this;
             tw.database.loadData();
             Types = tw.database.Types;
-            TypesForUndo = new ObservableCollection<ResourceType>();
             IndexesForUndo = new List<int>();
         }
 
@@ -58,14 +56,16 @@ namespace ResourcesApplication
             buttonEditt_Click(null, null);
         }
 
-
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
         private void buttonEditt_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedType != null)
             {
                 ResourceType rt = new ResourceType(SelectedType);
-                TypesForUndo.Add(rt);
 
                 int index = 0;
                 int brojac = -1;
@@ -106,22 +106,5 @@ namespace ResourcesApplication
             }
         }
 
-        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
-        {
-
-            if (TypesForUndo.Count() != 0)
-            {
-                int position = IndexesForUndo.Count() - 1;
-
-                ResourceType type = TypesForUndo.ElementAt(TypesForUndo.Count() - 1);
-                TypesForUndo.RemoveAt(TypesForUndo.Count() - 1);
-                int positionForInsert = IndexesForUndo.ElementAt(position);
-                Types.Insert(positionForInsert, type);
-                Types.RemoveAt(positionForInsert + 1);
-                IndexesForUndo.RemoveAt(position);
-                tw.database.SaveTypes();
-
-            }
-        }
     }
 }

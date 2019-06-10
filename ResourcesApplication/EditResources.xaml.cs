@@ -29,8 +29,6 @@ namespace ResourcesApplication
             }
         }
 
-        public ObservableCollection<Resource> ResourcesForUndo { get; set; }
-        public List<int> IndexesForUndo;
 
         public Resource SelectedResource { get; set; }
         public EditResources(TempWindow t)
@@ -42,13 +40,13 @@ namespace ResourcesApplication
             DataContext = this;
 
             Resources = tw.database.Resources;
-            ResourcesForUndo = new ObservableCollection<Resource>();
-            IndexesForUndo = new List<int>();
-
-
-
-
         }
+
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedResource != null)
@@ -63,9 +61,7 @@ namespace ResourcesApplication
                         index = brojac;
                     }
                 }
-                IndexesForUndo.Add(index);
                 Resource resource = new Resource(SelectedResource);
-                ResourcesForUndo.Add(resource);
                 EditResource editResource = new EditResource(SelectedResource.Id, tw);
                 editResource.Show();
             }
@@ -101,21 +97,5 @@ namespace ResourcesApplication
             }
         }
 
-        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
-        {
-            if (ResourcesForUndo.Count() != 0)
-            {
-                int position = IndexesForUndo.Count() - 1;
-
-                Resource resource = ResourcesForUndo.ElementAt(ResourcesForUndo.Count() - 1);
-                ResourcesForUndo.RemoveAt(ResourcesForUndo.Count() - 1);
-                int positionForInsert = IndexesForUndo.ElementAt(position);
-                Resources.Insert(positionForInsert, resource);
-                Resources.RemoveAt(positionForInsert + 1);
-                IndexesForUndo.RemoveAt(position);
-                tw.database.SaveResources();
-
-            }
-        }
     }
 }

@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Pretraga resursa po Etiketi resursa" Height="170" Width="400">
-    <Grid Background="Aqua">
+        Title="Pretraga resursa po Etiketi resursa" Height="189.429" Width="427.061">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -18,9 +18,9 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="30"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" Content="Pretražite resurse na mapi po etiketi resursa:"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Pretražite resurse na mapi po etiketi resursa" FontSize="17"/>
 
-        <Grid Grid.Column="1" Grid.Row="1" Background="White">
+        <Grid Grid.Column="1" Grid.Row="1" Background="Orange">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
@@ -29,16 +29,16 @@
                 <ColumnDefinition Width="90"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Etiketa resursa:"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Etiketa resursa:" FontSize="17" Grid.ColumnSpan="2" Margin="0,0,235,0"/>
             <StackPanel Grid.Row="0" Grid.Column="1">
-                <ComboBox Name="autoCompleteBoxTags" ItemsSource="{Binding Path=Tags, UpdateSourceTrigger=PropertyChanged}" ToolTip="Dovanje nekog od postojećih etiketa resursa (prikazani su id-ijevi etiketa)"
+                <ComboBox Background="White" Name="autoCompleteBoxTags" ItemsSource="{Binding Path=Tags, UpdateSourceTrigger=PropertyChanged}" ToolTip="Dovanje nekog od postojećih etiketa resursa (prikazani su id-ijevi etiketa)"
                           DisplayMemberPath="Id"
                           SelectedValuePath="Id"
-                          SelectedValue="{Binding Path=Tags}" />
+                          SelectedValue="{Binding Path=Tags}" Margin="35,0,0,0" />
             </StackPanel>
 
             <Label Grid.Row="1" Grid.Column="1" Content="" Foreground="Red" Name="Message"/>
         </Grid>
-        <Button Name="buttonSearch" IsEnabled="True" ToolTip="Pretraži resurse po unesenim kriterijumima"  Content="Pretraži" Grid.Column="1" Click="tagSearch" Grid.Row="2" />
+        <Button Background="White" Name="buttonSearch" IsEnabled="True" ToolTip="Pretraži resurse po unesenim kriterijumima"  Content="Pretraži" Grid.Column="1" Click="tagSearch" Grid.Row="2" FontSize="17"/>
     </Grid>
 </Window>

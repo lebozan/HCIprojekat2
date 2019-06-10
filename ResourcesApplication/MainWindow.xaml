@@ -6,47 +6,49 @@
         xmlns:cmd="clr-namespace:ResourcesApplication.Commands"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Maps" Height="750" Width="1100">
+        Title="Mapa" Height="650" Width="1050">
     <DockPanel>
 
-        <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid RenderTransformOrigin="0.501,0.492">
             <Grid.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Maps/background.jpg" AlignmentY="Top" AlignmentX="Center"/>
             </Grid.Background>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="300*" />
-                <RowDefinition Height="300*"/>
-                <RowDefinition Height="50"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="230" />
+                <RowDefinition Height="0"/>
+                <RowDefinition Height="230"/>
+                <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="400" />
-                <ColumnDefinition Width="400" />
+                <ColumnDefinition Width="320" />
+                <ColumnDefinition Width="0" />
+                <ColumnDefinition Width="320" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Button Name="mapa1Button" ToolTip="Prikaz mape sveta deo 1" Grid.Column="1" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="Mapa1Button_Click">
+            <Button Name="worldButton" ToolTip="Prikaz mape sveta deo 1" Grid.Column="1" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="worldButton_Click">
                 <StackPanel >
-                    <Image Name="Mapa1" Width="400" Height="330" Stretch="Fill" Source="Maps/world-map-big_01.gif"/>
+                    <Image Name="World" Height="230" Width="320" Source="Maps/world-map-big_01.gif"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="mapa2Button" ToolTip="Prikaz mape sveta deo 2" Grid.Column="2" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="Mapa2Button_Click">
+            <Button Name="southAmericaButton" ToolTip="Prikaz mape sveta deo 2" Grid.Column="3" Grid.Row="1" Background="Transparent" BorderThickness="0" Click="europeButton_Click">
                 <StackPanel >
-                    <Image Name="Mapa2" Width="400" Height="330" Stretch="Fill" Source="Maps/world-map-big_02.gif"/>
+                    <Image Name="SouthAmerica" Height="230" Width="320" Source="Maps/world-map-big_02.gif"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="mapa3Button" ToolTip="Prikaz mape sveta deo 3" Grid.Column="1" Grid.Row="2" Background="Transparent" BorderThickness="0" Click="Mapa3Button_Click">
-                <StackPanel>
-                    <Image Name="Mapa3"  Width="400" Height="330" Stretch="Fill" Source="Maps/world-map-big_03.gif"/>
+            <Button Name="europeButton" ToolTip="Prikaz mape sveta deo 3" Grid.Column="1" Grid.Row="3" Background="Transparent" BorderThickness="0" Click="americaButton_Click">
+                <StackPanel >
+                    <Image Name="Europe" Height="230" Width="320" Source="Maps/world-map-big_03.gif"/>
                 </StackPanel>
             </Button>
 
-            <Button Name="mapa4Button" ToolTip="Prikaz mape sveta deo 4" Grid.Column="2" Grid.Row="2" Background="Transparent" BorderThickness="0" Click="Mapa4Button_Click">
+            <Button Name="asiaButton" ToolTip="Prikaz mape sveta deo 4" Grid.Column="3" Grid.Row="3" Background="Transparent" BorderThickness="0" Click="asiaButton_Click">
                 <StackPanel >
-                    <Image Name="Mapa4" Width="400" Height="330" Stretch="Fill" Source="Maps/world-map-big_04.gif"/>
+                    <Image Name="Africa" Height="230" Width="320" Source="Maps/world-map-big_04.gif"/>
                 </StackPanel>
             </Button>
         </Grid>

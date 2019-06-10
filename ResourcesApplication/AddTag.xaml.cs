@@ -91,6 +91,11 @@ namespace ResourcesApplication
                 descriptionError = true;
         }
 
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
         private void buttonSave_Click(object sender, RoutedEventArgs e)
         {
             idError = false; descriptionError = false;

@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Pretraga resursa po tipu resursa" Height="170" Width="400">
-    <Grid Background="Aqua">
+        Title="Pretraga resursa po tipu resursa" Height="189.429" Width="427.061">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -18,9 +18,9 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="30"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" Content="Pretražite resurse na mapi po tipu resursa:"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Pretražite resurse na mapi po tipu resursa" FontSize="17"/>
 
-        <Grid Grid.Column="1" Grid.Row="1" Background="White">
+        <Grid Grid.Column="1" Grid.Row="1" Background="Orange">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
@@ -29,16 +29,16 @@
                 <ColumnDefinition Width="90"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Tip resursa:"/>
+            <Label Grid.Row="0" Grid.Column="0" Content="Tip resursa:" FontSize="17" Grid.ColumnSpan="2" Margin="0,0,260,0"/>
             <StackPanel Grid.Row="0" Grid.Column="1">
-                <ComboBox Name="autoCompleteBoxTypes" ItemsSource="{Binding Path=Types, UpdateSourceTrigger=PropertyChanged}" ToolTip="Odabor jednog od postojećih tipova resursa (prikazani su id-ijevi tipova)"
+                <ComboBox Background="White" Name="autoCompleteBoxTypes" ItemsSource="{Binding Path=Types, UpdateSourceTrigger=PropertyChanged}" ToolTip="Odabor jednog od postojećih tipova resursa (prikazani su id-ijevi tipova)"
                           DisplayMemberPath="Id"
                           SelectedValuePath="Id"
-                          SelectedValue="{Binding Path=Types}" />
+                          SelectedValue="{Binding Path=Types}" Margin="10,0,0,0" />
             </StackPanel>
 
             <Label Grid.Row="1" Grid.Column="1" Content="" Foreground="Red" Name="Message"/>
         </Grid>
-        <Button Name="buttonSearch" IsEnabled="True" ToolTip="Pretraži resurse po unesenim kriterijumima"  Content="Pretraži" Grid.Column="1" Click="typeSearch" Grid.Row="2" />
+        <Button Background="White" Name="buttonSearch" IsEnabled="True" ToolTip="Pretraži resurse po unesenim kriterijumima"  Content="Pretraži" Grid.Column="1" Click="typeSearch" Grid.Row="2" FontSize="17" />
     </Grid>
 </Window>

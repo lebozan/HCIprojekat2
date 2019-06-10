@@ -6,34 +6,33 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
         Title="Izmena tipova resursa" Height="450" Width="800">
-    <Grid Background="LightGray">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="30" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="50" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="100" />
-            </Grid.ColumnDefinitions>
+    <Grid Background="Orange">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
 
-            <DataGrid Name="typesGrid" MouseDoubleClick="typesGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedType, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Types}" Margin="5,10,0,116" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="typesGrid_SelectionChanged" Grid.ColumnSpan="2">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Oznaka tipa" MinWidth="100" Width="*" Binding="{Binding Id}"/>
-                    <DataGridTextColumn Header="Ime tipa"  MinWidth="100" Width="*" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Opis tipa"   MinWidth="100" Width="*" Binding="{Binding Description}"/>
-                </DataGrid.Columns>
-            </DataGrid>
+        <DataGrid Background="Orange" Name="typesGrid" MouseDoubleClick="typesGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedType, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Types}" Margin="5,10,0,116" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="typesGrid_SelectionChanged" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Oznaka tipa" MinWidth="100" Width="*" Binding="{Binding Id}"/>
+                <DataGridTextColumn Header="Ime tipa"  MinWidth="100" Width="*" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Opis tipa"   MinWidth="100" Width="*" Binding="{Binding Description}"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
-            <Button Background="LightGreen" Content="Izmeni" Name="buttonEdit" ToolTip="Izmeni odabran tip resursa" Grid.Row="6" VerticalAlignment="Center" Margin="234,68,363,41" IsEnabled="False" Click="buttonEditt_Click" Height="30">
+        <Button Background="LawnGreen" FontSize="17" Content="Izmeni" Name="buttonEdit" ToolTip="Izmeni odabran tip resursa" Grid.Row="6" VerticalAlignment="Center" Margin="212,57,366,39" IsEnabled="False" Click="buttonEditt_Click" Height="43">
 
-            </Button>
-            <Button Background="LightCoral" Content="Opozovi izmenu" ToolTip="Opozovi prethodnu izmenu" HorizontalAlignment="Left" Margin="447,68,0,0" Grid.Row="6" VerticalAlignment="Top" Width="95" Click="ButtonUndo_Click" Height="30"/>
-
-        </Grid>
+        </Button>
+        <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="465,57,104,39" FontSize="17" Grid.Row="6" RenderTransformOrigin="0.494,-0.5"/>
+    </Grid>
 </Window>

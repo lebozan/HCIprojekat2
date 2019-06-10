@@ -1,10 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Shapes;
 using ResourcesApplication.Beans;
 
 namespace ResourcesApplication
@@ -16,18 +28,18 @@ namespace ResourcesApplication
     {
 
         public TempWindow tw { get; set; }
-        private ObservableCollection<Resource> _resources;
+        private ObservableCollection<Resource> resources;
 
         public ObservableCollection<Resource> Resources
         {
-            get { return _resources; }
+            get { return resources; }
             set
             {
-                if (value != _resources)
+                if (value != resources)
                 {
 
 
-                    _resources = value;
+                    resources = value;
                     OnPropertyChanged("Resources");
 
 
@@ -37,13 +49,10 @@ namespace ResourcesApplication
             }
         }
 
-        public ObservableCollection<Resource> ResourcesForUndo
-        {
 
-            get; set;
-        }
 
         public Resource SelectedResource { get; set; }
+
 
         public int OldCount { get; set; }
         public int NewCount { get; set; }
@@ -56,28 +65,20 @@ namespace ResourcesApplication
             DataContext = this;
 
             Resources = tw.database.Resources;
-            ResourcesForUndo = new ObservableCollection<Resource>();
 
 
         }
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Are you sure?", "Delete Confirmation", System.Windows.MessageBoxButton.YesNo);
+            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Da li ste sigurni da želite da obrišete odabrani resurs?", "Upozorenje", System.Windows.MessageBoxButton.YesNo);
             if (messageBoxResult == MessageBoxResult.Yes)
             {
                 Resource forDelete = new Resource(SelectedResource);
-                ResourcesForUndo.Add(forDelete);
                 tw.database.DeleteResource(forDelete);
                 tw.addToResourcesToShow();
                 tw.ResourcePins_Draw();
 
             }
-
-
-            /*
-            DeleteResourceConfirmation d = new DeleteResourceConfirmation(SelectedResource.Id);
-            d.Show();
-            */
 
 
         }
@@ -97,9 +98,10 @@ namespace ResourcesApplication
             buttonDelete_Click(null, null);
         }
 
-
-
-
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -111,23 +113,6 @@ namespace ResourcesApplication
                 PropertyChanged(this, new PropertyChangedEventArgs(name));
 
             }
-        }
-
-
-
-        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
-        {
-
-            if (ResourcesForUndo.Count() != 0)
-            {
-                Resource resource = ResourcesForUndo.ElementAt(ResourcesForUndo.Count() - 1);
-                ResourcesForUndo.RemoveAt(ResourcesForUndo.Count() - 1);
-                Resources.Add(resource);
-                tw.database.SaveResources();
-                tw.addToResourcesToShow();
-            }
-
-
         }
 
 

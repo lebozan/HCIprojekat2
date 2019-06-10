@@ -129,9 +129,6 @@
     <Compile Include="IdSearch.xaml.cs">
       <DependentUpon>IdSearch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MapSearch.xaml.cs">
-      <DependentUpon>MapSearch.xaml</DependentUpon>
-    </Compile>
     <Compile Include="NameSearch.xaml.cs">
       <DependentUpon>NameSearch.xaml</DependentUpon>
     </Compile>
@@ -237,10 +234,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MapSearch.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="NameSearch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -299,55 +292,41 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Html\BrisanjeEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\BrisanjeResursa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\BrisanjeTipa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\DodavanjeEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\DodavanjeTipa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Html\slika11.png" />
+    <Resource Include="Html\slika12.png" />
+    <Resource Include="Html\slika13.png" />
+    <Resource Include="Html\slika14.png" />
+    <Resource Include="Html\slika10.png" />
+    <Resource Include="Html\slika7.png" />
+    <Resource Include="Html\slika8.png" />
+    <Resource Include="Html\slika9.png" />
+    <Resource Include="Html\slika3.png" />
+    <Resource Include="Html\slika4.png" />
+    <Resource Include="Html\slika5.png" />
+    <Resource Include="Html\slika6.png" />
+    <Resource Include="Html\slika1.png" />
+    <Resource Include="Html\slika2.png" />
+    <Resource Include="Maps\background.jpg" />
+    <Resource Include="Icons\FireIcon2.png" />
+    <Resource Include="Icons\ForestIcon2.png" />
+    <Resource Include="Icons\NaturalFoodIcon.png" />
+    <Resource Include="Icons\NaturalFoodIcon2.png" />
+    <Resource Include="Icons\OilRigIcon.png" />
+    <Resource Include="Icons\OilRigIcon2.png" />
+    <Resource Include="Icons\WaterIcon2.png" />
+    <Resource Include="Icons\WindIcon2.png" />
+    <Resource Include="Icons\TutorialIcon.png" />
+    <Resource Include="Icons\DocumentIcon.png" />
+    <Resource Include="Icons\FireIcon.png" />
     <Content Include="Html\error.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Maps\world_map.png" />
     <Resource Include="Maps\world-map-big_01.gif" />
     <Resource Include="Maps\world-map-big_02.gif" />
     <Resource Include="Maps\world-map-big_03.gif" />
     <Resource Include="Maps\world-map-big_04.gif" />
-    <Resource Include="Icons\fancy.PNG" />
-    <Content Include="Html\GlavniProzorAplikacije.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\IzmenaEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\IzmenaResursa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\IzmenaTipa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Html\MainWindow.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PocetniProzorAplikacije.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PrikazEtikete.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Html\PrikazResursa.PNG" />
-    <Content Include="Html\PrikazResursa.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Html\PrikazTipa.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Html\Resource.html">
@@ -359,16 +338,10 @@
     <Content Include="Html\ResourceType.html">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Maps\background.jpg" />
     <Resource Include="Icons\AddIcon.png" />
     <Resource Include="Icons\AppIcon.png" />
     <Resource Include="Icons\CancelIcon.png" />
     <Resource Include="Icons\DeleteIcon.png" />
-    <Resource Include="Icons\DemoPauseIcon.png" />
-    <Resource Include="Icons\DemoPlayIcon.png" />
-    <Resource Include="Icons\DemoStopIcon.png" />
-    <Resource Include="Icons\DemoTapeIcon.png" />
-    <Resource Include="Icons\DocumentIcon.png" />
     <Resource Include="Icons\EditIcon.png" />
     <Resource Include="Icons\ForestIcon.png" />
     <Resource Include="Icons\OilIcon.png" />
@@ -378,13 +351,6 @@
     <Resource Include="Icons\TransmissionTowerIcon.png" />
     <Resource Include="Icons\WaterIcon.png" />
     <Resource Include="Icons\WindIcon.png" />
-    <Resource Include="Maps\asia_map.jpg" />
-    <Resource Include="Maps\europe_map.jpg" />
-    <Resource Include="Maps\south_america_map.jpg" />
-    <Resource Include="Maps\world_map.png" />
-    <Resource Include="Maps\NoviSadMap1.png" />
-    <Resource Include="Maps\NoviSadMap2.png" />
-    <Resource Include="Maps\NoviSadMap3.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

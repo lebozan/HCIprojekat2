@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
         Title="Izmena etiketa" Height="450" Width="800">
-    <Grid Background="LightGray">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="50" />
@@ -24,7 +24,7 @@
 
 
 
-        <DataGrid Name="tagsGrid" MouseDoubleClick="tagsGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedTag, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tags}" Margin="0,10,0,127" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="tagsGrid_SelectionChanged" Grid.ColumnSpan="2">
+        <DataGrid Background="Orange" Name="tagsGrid" MouseDoubleClick="tagsGrid_MouseDoubleClick" AutoGenerateColumns="False" SelectedItem="{Binding Path=SelectedTag, UpdateSourceTrigger=PropertyChanged}" ItemsSource="{Binding Path=Tags}" Margin="0,10,0,127" IsReadOnly="True" Grid.Column="0" Grid.RowSpan="7" SelectionChanged="tagsGrid_SelectionChanged" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Oznaka etikete" MinWidth="100" Width="*" Binding="{Binding Id}"/>
                 <DataGridTemplateColumn Header="Boja etikete">
@@ -38,11 +38,10 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <Button Content="Izmeni" Name="buttonEdit" Background="LightGreen" ToolTip="Izmena odabrane etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="244,75,350,34" IsEnabled="False" Click="buttonEdit_Click" Height="35">
+        <Button FontSize="17" Content="Izmeni" Name="buttonEdit" Background="LawnGreen" ToolTip="Izmena odabrane etiketu" Grid.Row="6" VerticalAlignment="Center" Margin="221,55,373,38" IsEnabled="False" Click="buttonEdit_Click" Height="46">
 
         </Button>
-        <Button Content="Opozovi izmenu" Background="LightCoral" HorizontalAlignment="Left" Margin="383,75,0,0" Grid.Row="6" VerticalAlignment="Top" Width="98" Click="ButtonUndo_Click" Height="30"/>
-
+        <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="439,55,131,38" Padding="20,5" FontSize="17" Grid.Row="6"/>
 
     </Grid>
 </Window>

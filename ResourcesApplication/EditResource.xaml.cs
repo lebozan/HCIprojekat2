@@ -67,7 +67,6 @@ namespace ResourcesApplication
             Database d = tw.database;
             SelectedTags = new ObservableCollection<ResourceTag>();
 
-            comboBoxTags.DataContext = this;
 
             foreach (var tag in Resource.Tags)
             {

@@ -7,8 +7,8 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
          xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
-        Title="Dodavanje Etikete" Height="400" Width="800">
-    <Grid>
+        Title="Dodavanje etikete" Height="400" Width="800">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -25,8 +25,8 @@
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Content="Id:"/>
-            <TextBox Name="textBoxId" MaxLength="55" Validation.Error="textBoxId_Error" TextChanged="textBoxId_TextChanged" ToolTip="Unos etikete manifestacija" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" Margin="3">
+            <Label HorizontalAlignment="Right" Grid.Column="0" Grid.Row="0" Content="Id:" FontSize="17"/>
+            <TextBox Name="textBoxId" MaxLength="55" Validation.Error="textBoxId_Error" TextChanged="textBoxId_TextChanged" ToolTip="Unos etikete manifestacija" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" Margin="3,3,485,3">
                 <TextBox.Text>
                     <Binding Path="Id" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -53,11 +53,11 @@
                     </ControlTemplate>
                 </Validation.ErrorTemplate>
             </TextBox>
-            <Label Grid.Column="0" Grid.Row="1" Content="Boja:"/>
-            <wpfTool:ColorPicker Name ="ColorPicker" ToolTip="Odabir boje etikete" SelectedColorChanged="ColorPicker_SelectedColorChanged" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" Margin="3"/>
+            <Label HorizontalAlignment="Right" FontSize="17" Grid.Column="0" Grid.Row="1" Content="Boja:"/>
+            <wpfTool:ColorPicker Name ="ColorPicker" ToolTip="Odabir boje etikete" SelectedColorChanged="ColorPicker_SelectedColorChanged" Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" Margin="3,3,485,3"/>
 
-            <Label Grid.Column="0" Grid.Row="2" Content="Opis:"/>
-            <TextBox Name="textBoxDescription" MaxLength="1100" Validation.Error="textBoxDescription_Error"   TextWrapping="Wrap" AcceptsReturn="True" Grid.Column="1" Grid.Row="2" ToolTip="Opis etikete" VerticalScrollBarVisibility="Auto" Margin="3,3,3,10" >
+            <Label HorizontalAlignment="Right" FontSize="17" Grid.Column="0" Grid.Row="2" Content="Opis:"/>
+            <TextBox Name="textBoxDescription" MaxLength="1100" Validation.Error="textBoxDescription_Error"   TextWrapping="Wrap" AcceptsReturn="True" Grid.Column="1" Grid.Row="2" ToolTip="Opis etikete" VerticalScrollBarVisibility="Auto" Margin="3,3,3,93" >
                 <TextBox.Text>
                     <Binding Path="Description" UpdateSourceTrigger="LostFocus">
                         <Binding.ValidationRules>
@@ -87,9 +87,9 @@
 
         </Grid>
 
-        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Background="LightGray">
-            <Button Name="buttonSave" Click="buttonSave_Click" IsEnabled="False" Content="Sačuvaj" Margin="280,10,10,10" Padding="20,5" />
-            <Button Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Margin="10" Padding="20,5" />
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" Background="Orange">
+            <Button Background="LawnGreen" Name="buttonSave" Click="buttonSave_Click" IsEnabled="False" Content="Sačuvaj" Margin="280,10,10,10" Padding="20,5" FontSize="17" />
+            <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="10" Padding="20,5" FontSize="17"/>
         </StackPanel>
 
 

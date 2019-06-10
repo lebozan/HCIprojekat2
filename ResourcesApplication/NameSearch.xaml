@@ -7,10 +7,10 @@
         xmlns:toolkit="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
-        Title="Pretraga resursa po nazivu" Height="170" Width="400">
-    <Grid Background="Aqua">
+        Title="Pretraga resursa po nazivu" Height="189.429" Width="427.061">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="40"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
             <RowDefinition Height="30"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -20,9 +20,9 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="30"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.Column="1" Content="Pretražite resurse na mapi po nazivu resursa:"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Pretražite resurse na mapi po nazivu resursa" FontSize="17"/>
 
-        <Grid Grid.Column="1" Grid.Row="1" Background="White">
+        <Grid Grid.Column="1" Grid.Row="1" Background="Orange">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"></RowDefinition>
                 <RowDefinition Height="30"></RowDefinition>
@@ -31,8 +31,8 @@
                 <ColumnDefinition Width="90"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Content="Naziv resursa:"/>
-            <toolkit:AutoCompleteBox ToolTip="Pretraga resursa na mapi po nazivu resursa" Grid.Column="1" Grid.Row="0" Name="autoCompleteBoxName" LostFocus="autoCompleteBoxTypes_LostFocus" PreviewKeyDown="autoCompleteBoxType_PreviewKeyDown" IsTextCompletionEnabled="True" FilterMode="StartsWith" ItemsSource="{Binding Path=Resources, UpdateSourceTrigger=PropertyChanged}" ValueMemberPath="Name" >
+            <Label Grid.Row="0" Grid.Column="0" Content="Naziv resursa:"  FontSize="17" Grid.ColumnSpan="2" Margin="0,0,231,0"/>
+            <toolkit:AutoCompleteBox ToolTip="Pretraga resursa na mapi po nazivu resursa" Grid.Column="1" Grid.Row="0" Name="autoCompleteBoxName" LostFocus="autoCompleteBoxTypes_LostFocus" PreviewKeyDown="autoCompleteBoxType_PreviewKeyDown" IsTextCompletionEnabled="True" FilterMode="StartsWith" ItemsSource="{Binding Path=Resources, UpdateSourceTrigger=PropertyChanged}" ValueMemberPath="Name" Margin="38,0,0,0" >
                 <toolkit:AutoCompleteBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Name}" ></TextBlock>
@@ -41,6 +41,6 @@
             </toolkit:AutoCompleteBox>
             <Label Grid.Row="1" Grid.Column="1" Content="" Foreground="Red" Name="Message"/>
         </Grid>
-        <Button Name="buttonSearch" IsEnabled="True" ToolTip="Pretraži resurse po unesenim kriterijumima"  Content="Pretraži" Grid.Column="1" Click="NameSearchh" Grid.Row="2" />
+        <Button Background="White" Name="buttonSearch" IsEnabled="True" ToolTip="Pretraži resurse po unesenim kriterijumima"  Content="Pretraži" Grid.Column="1" Click="NameSearchh" Grid.Row="2" FontSize="17"/>
     </Grid>
 </Window>

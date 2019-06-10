@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:ResourcesApplication"
         mc:Ignorable="d"
         Title="Brisanje tipova resursa" Height="450" Width="800">
-    <Grid Background="LightGray">
+    <Grid Background="Orange">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="50" />
@@ -29,9 +29,8 @@
                 <DataGridTextColumn Header="Opis tipa"   MinWidth="100" Width="*" Binding="{Binding Description}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button IsEnabled="False" Name="ButtonObrisi" ToolTip="Obrisi izabrani tip" Content="Obrisi" HorizontalAlignment="Left" Margin="249,78,0,0" Grid.Row="6" VerticalAlignment="Top" Width="105" Click="ButtonObrisi_Click" Height="36"/>
-        <Button Name="ButtonBrisanje" ToolTip="Opozovi prethodno brisanje" Content="Opozovi" HorizontalAlignment="Left" Margin="427,78,0,0" Grid.Row="6" VerticalAlignment="Top" Width="103" Click="ButtonOpozovi_Click" Height="36"/>
-
+        <Button Background="Red" FontSize="17" IsEnabled="False" Name="ButtonObrisi" ToolTip="Obrisi izabrani tip" Content="Obriši" HorizontalAlignment="Left" Margin="182,54,0,0" Grid.Row="6" VerticalAlignment="Top" Width="120" Click="ButtonObrisi_Click" Height="43"/>
+        <Button Background="Red" Name="buttonCancel" ToolTip="Odustajanje od unosa podataka"  Content="Odustani" Click="buttonCancel_Click" Margin="513,54,162,42" FontSize="17" Grid.Row="6" RenderTransformOrigin="0.494,-0.5"/>
 
     </Grid>
 </Window>

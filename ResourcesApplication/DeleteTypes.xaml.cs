@@ -38,7 +38,6 @@ namespace ResourcesApplication
                 }
             }
         }
-        public ObservableCollection<ResourceType> TypesForUndo { get; set; }
 
         public DeleteTypes(TempWindow t)
         {
@@ -49,7 +48,6 @@ namespace ResourcesApplication
             DataContext = this;
             tw.database.loadData();
             Types = tw.database.Types;
-            TypesForUndo = new ObservableCollection<ResourceType>();
 
         }
 
@@ -63,28 +61,9 @@ namespace ResourcesApplication
 
         private void buttonDelete_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Da li ste sigurni? Brisanje tipa ce prouzrokovati brisanje resursa koji poseduju taj tip. Nastavi?", "Upozorenje", System.Windows.MessageBoxButton.YesNo);
-            if (messageBoxResult == MessageBoxResult.Yes)
-            {
-                ObservableCollection<Resource> resources = Database.getInstance().Resources;
-
-                for (int i = resources.Count - 1; i >= 0; i--)
-                {
-                    if (resources[i].Type.Id.Equals(SelectedType.Id))
-                    {
-                        Database.DeleteResource(resources[i]);
-                    }
-                }
-                ResourceType type = new ResourceType(SelectedType);
-                TypesForUndo.Add(type);
-                Database.DeleteType(SelectedType);
-
-            }
-
-    */
 
         }
+
         private void typesGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (SelectedType != null)
@@ -104,23 +83,11 @@ namespace ResourcesApplication
             }
         }
 
-        private void ButtonUndo_Click(object sender, RoutedEventArgs e)
-        {
-
-            if (TypesForUndo.Count() != 0)
-            {
-                ResourceType type = TypesForUndo.ElementAt(TypesForUndo.Count() - 1);
-                TypesForUndo.RemoveAt(TypesForUndo.Count() - 1);
-                Types.Add(type);
-                tw.database.SaveTypes();
-            }
-        }
-
         private void ButtonObrisi_Click(object sender, RoutedEventArgs e)
         {
             if (SelectedType != null)
             {
-                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Da li ste sigurni? Brisanje tipa ce prouzrokovati brisanje resursa koji poseduju taj tip. Nastavi?", "Upozorenje", System.Windows.MessageBoxButton.YesNo);
+                MessageBoxResult messageBoxResult = System.Windows.MessageBox.Show("Brisanje tipa ce izazvati brisanje resursa koji poseduju taj tip. Nastavi?", "Upozorenje", System.Windows.MessageBoxButton.YesNo);
                 if (messageBoxResult == MessageBoxResult.Yes)
                 {
                     ObservableCollection<Resource> resources = tw.database.Resources;
@@ -133,7 +100,6 @@ namespace ResourcesApplication
                         }
                     }
                     ResourceType type = new ResourceType(SelectedType);
-                    TypesForUndo.Add(type);
                     tw.database.DeleteType(SelectedType);
 
                 }
@@ -144,15 +110,10 @@ namespace ResourcesApplication
             }
         }
 
-        private void ButtonOpozovi_Click(object sender, RoutedEventArgs e)
+        private void buttonCancel_Click(object sender, RoutedEventArgs e)
         {
-            if (TypesForUndo.Count() != 0)
-            {
-                ResourceType type = TypesForUndo.ElementAt(TypesForUndo.Count() - 1);
-                TypesForUndo.RemoveAt(TypesForUndo.Count() - 1);
-                Types.Add(type);
-                tw.database.SaveTypes();
-            }
+            Close();
         }
+
     }
 }

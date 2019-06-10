@@ -7,7 +7,7 @@
         xmlns:validation="clr-namespace:ResourcesApplication.Validation"
         mc:Ignorable="d"
         Title="Izmena tipa" Height="450" Width="800">
-    <Grid Background="LightGray">
+    <Grid Background="Orange">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="77*"/>
             <ColumnDefinition Width="549*"/>
@@ -31,8 +31,8 @@
                 <RowDefinition Height="150"></RowDefinition>
             </Grid.RowDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Content="Id:"/>
-            <TextBox Name="textBoxId" MaxLength="55" ToolTip="Unos jedinstvene čitljive oznake za tip resursa"  IsEnabled="False" Validation.Error="textBoxId_Error" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" VerticalContentAlignment="Center" Margin="3" >
+            <Label HorizontalAlignment="Right" FontSize="17" Grid.Column="0" Grid.Row="0" Content="Id:"/>
+            <TextBox Background="White" Name="textBoxId" MaxLength="55" ToolTip="Unos jedinstvene čitljive oznake za tip resursa" IsEnabled="False" Validation.Error="textBoxId_Error" Grid.Column="1" Grid.Row="0" VerticalContentAlignment="Center" Margin="3,3,449,3" >
                 <TextBox.Text>
                     <Binding Path="Id" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -60,8 +60,8 @@
                 </Validation.ErrorTemplate>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="1" Content="Ime:"/>
-            <TextBox Name="textBoxName" MaxLength="55" ToolTip="Unos imena tipa resursa" Validation.Error="textBoxName_Error"  Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" VerticalContentAlignment="Center" Margin="3">
+            <Label HorizontalAlignment="Right" FontSize="17" Grid.Column="0" Grid.Row="1" Content="Ime:"/>
+            <TextBox Name="textBoxName" MaxLength="55" ToolTip="Unos imena tipa resursa" Validation.Error="textBoxName_Error"  Grid.Column="1" Grid.Row="1" VerticalContentAlignment="Center" Margin="3,3,356,3">
                 <TextBox.Text>
                     <Binding Path="Name" UpdateSourceTrigger="LostFocus" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -87,8 +87,8 @@
                 </Validation.ErrorTemplate>
             </TextBox>
 
-            <Label Grid.Column="0" Grid.Row="2" Content="Ikonica:"/>
-            <TextBox Name="textBoxIconPath" ToolTip="Prikaz lokacije ikonice na vašem računaru" Validation.Error="textBoxIconPath_Error" IsEnabled="False" Grid.Column="1" Grid.Row="2" Margin="3,3,0,3" HorizontalAlignment="Left" Width="255" >
+            <Label HorizontalAlignment="Right" FontSize="17" Grid.Column="0" Grid.Row="2" Content="Ikonica:" Grid.ColumnSpan="2" Margin="0,0,506,0" Width="74"/>
+            <TextBox Name="textBoxIconPath" ToolTip="Prikaz lokacije ikonice na vašem računaru" Validation.Error="textBoxIconPath_Error" IsEnabled="False" Grid.Column="1" Grid.Row="2" Margin="24,3,0,3" HorizontalAlignment="Left" Width="234" >
                 <TextBox.Text>
                     <Binding Path="IconPath" UpdateSourceTrigger="PropertyChanged" NotifyOnValidationError="True">
                         <Binding.ValidationRules>
@@ -121,7 +121,7 @@
             </Button>
 
 
-            <Label Grid.Column="0" Grid.Row="3" Content="Opis:"/>
+            <Label HorizontalAlignment="Right" FontSize="17" Grid.Column="0" Grid.Row="3" Content="Opis:"/>
             <TextBox Name="textBoxDescription" MaxLength="1100" Validation.Error="textBoxDescription_Error"  TextWrapping="Wrap" AcceptsReturn="True" ToolTip="Unos opisa tipa resursa" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Auto" Margin="3">
                 <TextBox.Text>
                     <Binding Path="Description" UpdateSourceTrigger="LostFocus">
@@ -151,8 +151,8 @@
 
         </Grid>
 
-        <Button Background="LightGreen" x:Name="buttonSave" ToolTip="Čuvanje izmene" Click="buttonSave_Click" Content="Sačuvaj" Margin="277,350,79,28" Padding="20,5" Grid.Column="1" RenderTransformOrigin="0.615,0.391"/>
-        <Button Background="LightCoral" x:Name="buttonCancel" ToolTip="Odustajanje od izmene" Click="buttonCancel_Click" Content="Odustani" Margin="511,350,50,28" Padding="20,5" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Button Background="LawnGreen" FontSize="17" x:Name="buttonSave" ToolTip="Čuvanje izmene" Click="buttonSave_Click" Content="Sačuvaj" Margin="63,350,332,28" Padding="20,5" Grid.Column="1" RenderTransformOrigin="0.615,0.391"/>
+        <Button Background="Red" FontSize="17" x:Name="buttonCancel" ToolTip="Odustajanje od izmene" Click="buttonCancel_Click" Content="Odustani" Margin="283,350,112,28" Padding="20,5" Grid.Column="1"/>
 
 
 
